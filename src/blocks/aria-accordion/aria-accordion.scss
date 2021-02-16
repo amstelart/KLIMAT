@@ -1,0 +1,76 @@
+// В этом файле должны быть стили для БЭМ-блока aria-accordion, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.accordion-group {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 1rem 0;
+  margin: 0 30px 30px 30px;
+
+  &__accordion {
+    margin-top: -1px;
+  }
+
+  &__accordion-heading {
+    margin: 0;
+  }
+
+  &__accordion-btn {
+    position: relative;
+    background-color: transparent;
+    border-radius: 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-left: none;
+    border-right: none;
+    display: block;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 30px 280px 30px 68px;
+    color: #000;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      top: 50%;
+      right: 70px;
+      margin-top: -16px;
+      transform: rotate(0deg);
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAARCAYAAAC8XK78AAAApklEQVRIib3TPQqDQBBA4Qc5gzfwJKmDZRo7L5EUOYB4He+RWrASPEMKSUhYcGCRDa66MwPb7A/faxbgBLTAE8ixmTPQA43TMuA7r9EgwuGv2Rtk82YU4eMTcPEP78oRS7wIXdKKiMK1IjbhqSN24akiDuFHI5LgMo+NEUlxmToyQgWPjVDF1yJM8H8RlYe/tfFQhKwPUFrgoQhzXMZ90Q647noN/ABvpWkCjV5XAQAAAABJRU5ErkJggg==');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      transition: transform 0.3s;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__accordion-btn_expanded {
+    &::before {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__accordion-panel {
+    border-color: #ccc;
+    padding: 0.5rem 1rem;
+  }
+
+  &__accordion-btn_expanded {
+    // background-color: #bbc8d2;
+    // border-color: #ccc;
+    // border-radius: 0.3rem;
+    // border-style: solid;
+    // border-width: 0.05rem;
+  }
+}

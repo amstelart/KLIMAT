@@ -1,0 +1,73 @@
+// В этом файле должны быть стили для БЭМ-блока brand, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.brand {
+
+  $block-name:                &; // #{$block-name}__element
+
+  border-bottom: 1px solid #b5b5b5;
+  padding: 20px 0;
+
+  &__container {
+    max-width: 1140px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+    position: relative;
+  }
+
+  &__carousel {
+    padding: 0 100px;
+
+    .slick-track {
+      display: flex !important;
+    }
+  }
+
+  &__item {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__logo {
+    max-width: 100%;
+    height: auto;
+    margin: 0 10px;
+  }
+
+  &__nav {
+    position: relative;
+  }
+  .brand-left,
+  .brand-right {
+    width: 49px;
+    height: 49px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 49px 49px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+  .brand-left {
+    left: 0;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAxCAYAAABznEEcAAACTUlEQVRoge2av2sUQRSAP9c9Dw4CB5rKYBAEm4hKLK60ECQIh39BmghBCNjGLp0pLdIIipC/QATBIoVlIJFELk3AQlGrCEpS6AWSyDve4riZHHezs9lZ2a9Zdu9m533Mj327M2fqjQbKOWAWmAauAXXCowt0gGXgGbAvESYSY8Br4GaAgZ/EBtAGvoqEtMBqyQQSRKQVaxcyBV4AS8DPYuOz0gTmgBn9UeKelZZYA27pRRF4EFDQJ/HcEFkXid/GIBazzbDitXJDu5LQjVKzUIhdyMYX41o9CieuoTgw/1xWiX+oJEKhkgiFSqIPj4AfwFvNjnMlD4l54KnmOXeBybJJiMAT4/wzsOW5jmP4lEgLfAPuAHse67DiS8ImcBv46On+ffEhUagAHiQKFyCjRBACQuxYLi3wHbivx6bD/Q6BXcdYnCTupQSEC8CaaxDKqrZkd9iCLt3pqkOZQWgB110KukhsZw7XjrTEB5eCLt3pDfDYMiamMgzqUx8TwqIeExEZE6+Kmp2yTLGL2iIJF4F3wBU/oQ1O1oddECI+0o7CRXwlgIWK+EzFbSIrwIjHOqz4filKi4wDE57rOIbrFNsPEfkFLOgD7H0+of9FvoofGeeXgU95V+qBpn6I6FF9sgmFSiIUKolQKKtElD4x32ldXvKL4JJRZ2/1tGNcmCuJhBlnJ9bNHslifLLAvaTLrAeWGxRFpC1g7igQlv+LvR2RbrdpGyv0ZSHZZbN/Nq7VJGb50vAS2AFGgfM5ZbhZkUlItm1IpvywlwQCfwAtmWwvAjdLgAAAAABJRU5ErkJggg==');
+  }
+  .brand-right {
+    right: 0;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAxCAYAAABznEEcAAACPUlEQVRoge2aMUscQRTHf1nvcngQOTCpFG2ENAkqWiSdRUBsDj+BjYFDONAy+QSX0sJGUIT7BBIISZEiZSCGKGcTSCNqpWAwTU44kCezMFn2IDu3Mzsr+2+OeXez8343M29n5s2DSrWK0kOgAawAz4EK/qkLdIA2sA3ciIchxDjwHpj10PF++gHUgTOBkB74mjOAUALyoqSGkA6wC2wBv7P1L1Y1oAmsqi/F74b0xDdgXhkF4LVHTvfTjgZyIBB/tUksZId++RurGTWURN0gEoV8HEJxOtVslcAfvxKpp/84rxD/qIDwRQWELyog/lOyNvsEXAHrNhoo2XhoRHPAojJtAsPAuzQbcNETx8CJVm4Bb9JswAXEH+AVcK7ZUgVxNbF/AQu2QFxGJ2sgrkOsFZAs3hOpgwwaYkcM/4hLYBn4CDxWtpb6TBx+TSFkI/VFNumG9fuppY5kPiSpZDqcpi0AhHqatIIpxJE65rGhn0mfaTqc5CTu5QBzQjQVmROit0mHEilM7GvDegKwHwNgtKbKIsROqaAwptmMAcgAInUAHENYAcAhhDUAHEE8Aj7bAsARxDNgUiunCoAjiO9qjy3nvBtpA+Bojy0pqSWbDRRHNr6ogPBFBYQvyitEEC10tXLNvT9GmtAq3WVPO5qhmQMAIn52SuqyR5iMDxPcWyrN2ot5QFYKVA/oNwpE7XtxtyNQa5u6lqHPi8JbNjdDpXJZfJYN/x5wATwBRh0tDpNKgpBc25CV8Npd9gm4BVqOZS00QVErAAAAAElFTkSuQmCC');
+  }
+}

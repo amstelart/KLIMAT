@@ -1,0 +1,102 @@
+// В этом файле должны быть стили для БЭМ-блока services, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.services {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__container {
+    max-width: 1006px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    position: relative;
+    max-width: 50%;
+    flex-basis: 50%;
+    display: flex;
+
+    &--01 {
+    }
+    &--02 {
+    }
+    &--03 {
+    }
+    &--04 {
+    }
+  }
+
+  &__item-icon {
+    width: 100px;
+    height: 110px;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+    margin-right: 30px;
+
+    &.si-icon-01 {
+      top: 0;
+      right: 0;
+      background-image: url(../img/icon-services-01.png);
+    }
+    &.si-icon-02 {
+      top: 0;
+      right: 0;
+      background-image: url(../img/icon-services-02.png);
+    }
+    &.si-icon-03 {
+      top: 0;
+      left: 0;
+      background-image: url(../img/icon-services-03.png);
+    }
+    &.si-icon-04 {
+      top: 0;
+      left: 0;
+      background-image: url(../img/icon-services-04.png);
+    }
+  }
+
+  &__item-title {
+    color: #f5df4e;
+    font-weight: 600;
+    text-shadow: -3px 3px 2px rgba(87, 86, 86, 0.9);
+    font-size: 32px;
+    margin-bottom: 25px;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+  &__item-text {
+    font-size: 18px;
+    line-height: 1.1;
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
+  &__item-link {
+    color: #000;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+}
