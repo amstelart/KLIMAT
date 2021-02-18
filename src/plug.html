@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/plug.css">
+  </head>
+
+  <body style="background-image: url('img/intro.jpg');">
+
+    <div class="plug">
+      <headed class="plug__header">
+        <div class="plug__logo"><img src="img/logo.png" alt=""></div>
+      </headed>
+      <div class="plug__container">
+        <div class="plug__title">Сайт находится на стадии разработки, <br> но кондиционер вы можете купить уже сейчас</div>
+        <form action="" class="plug__form">
+          <div class="plug__form-row">
+            <div class="plug__form-col">
+              <label class="field-text field-text--feedback">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Ф.И.О" id="" name="">
+                </span>
+              </label>
+            </div>
+            <div class="plug__form-col">
+              <label class="field-text field-text--feedback">
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="ТЕЛЕФОН" id="" name="">
+                </span>
+              </label>
+            </div>
+          </div>
+          <label class="field-text field-text--feedback">
+            <span class="field-text__input-wrap">
+              <textarea class="field-text__input" type="textarea" name="" id="" rows="5" placeholder="Заявки оставляем тут" id="" name=""></textarea>
+            </span>
+          </label>
+          <p>наши менеджеры свяжутся с вами сразу после отправки заявки </p>
+          <div class="field-actions">
+            <button class="btn" type="submit">Отправить</button>
+          </div>
+          <div class="field-checkbox">
+            <div class="field-checkbox__input-wrap">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox" id="" name="">
+                <span class="field-checkbox__name-text">Нажимая кнопку "Отправить" вы даёте свое согласие на обработку персональных данных</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <footer class="plug__footer">
+        <div class="plug__phone"><a href="tel:+74712546454">+7 4712 54 64 54</a></div>
+      </footer>
+    </div>
+
+    @@include('_include/page_bottom.html')
+
+    <script>
+      $(document).ready(function(){
+
+      });
+    </script>
+
+  </body>
+</html>

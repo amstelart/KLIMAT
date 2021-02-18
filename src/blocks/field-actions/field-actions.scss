@@ -35,10 +35,20 @@ $line-height:                 1.375em !default;
     .btn {
       background-color: #f5df4e;
       color: #000;
-      padding: 0.3em 1.2em;
+      padding: 0.6em 1.2em;
       border-radius: 25px;
-      font-size: 20px;
+      font-weight: 600;
+      font-size: 16px;
       text-transform: uppercase;
+
+      &:hover {
+        background-color: darken(#f5df4e, 8%);
+      }
+
+      @media (min-width:$screen-lg) {
+        font-weight: 500;
+        font-size: 20px;
+      }
     }
   }
 }

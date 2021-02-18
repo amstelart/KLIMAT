@@ -91,11 +91,16 @@ $border-radius:               3px !default;
     margin-bottom: 10px;
 
     #{$block-name}__input {
-      border: 3px solid #787879;
+      border: 2px solid #787879;
+      font-size: 16px;
       border-radius: 25px;
-      font-size: 24px;
       font-weight: 300;
       padding: 0.3em 1.3em;
+
+      @media (min-width:$screen-lg) {
+        border: 3px solid #787879;
+        font-size: 24px;
+      }
     }
   }
 }

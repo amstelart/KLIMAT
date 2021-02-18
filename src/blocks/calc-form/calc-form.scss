@@ -9,7 +9,11 @@
   background: rgba(0, 0, 0, 0.85);
   border: 10px solid rgba(245, 223, 78, 0.9);;
   border-radius: 25px;
-  padding: 35px 57px 30px 57px;
+  padding: 35px 25px 30px 25px;
+
+  @media (min-width:$screen-md) {
+    padding: 35px 50px 30px 50px;
+  }
 
   &__group {
     display: flex;
@@ -19,10 +23,13 @@
   }
 
   .field-select--calc {
-    flex-basis: 50%;
-    max-width: 50%;
+    flex: 0 0 100%;
     padding-left: 15px;
     padding-right: 15px;
+
+    @media (min-width:$screen-md) {
+      flex: 0 0 50%;
+    }
   }
 
   &__action {

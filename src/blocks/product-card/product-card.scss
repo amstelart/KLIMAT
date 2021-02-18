@@ -16,18 +16,29 @@
     display: flex;
   }
 
+  &__img {
+    margin: auto;
+  }
+
   &__label {
     position: absolute;
     top: 15px;
     left: 15px;
-    font-size: 16px;
-    padding: 4px 15px;
+    font-size: 14px;
+    padding: 4px 10px;
     font-weight: 700;
     color: #000;
     background-color: #e6e6e6;
-    min-width: 147px;
+    min-width: 120px;
+
     &--new {
       background-color: #f5df4e;
+    }
+
+    @media (min-width:$screen-xl) {
+      font-size: 16px;
+      padding: 4px 15px;
+      min-width: 147px;
     }
   }
 
@@ -38,6 +49,7 @@
     line-height: 1.2;
     color: #000;
     padding: 0 35px;
+    margin-bottom: 5px;
 
     a {
       color: #000;
@@ -51,13 +63,17 @@
   }
   &__price {
     text-align: center;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 700;
     line-height: 1.2;
     color: #787879;
     margin-bottom: 10px;
     span {
       white-space: nowrap;
+    }
+
+    @media (min-width:$screen-xl) {
+      font-size: 36px;
     }
   }
 
@@ -67,11 +83,21 @@
 
     .btn {
       border-radius: 10px;
-      font-size: 22px;
+      font-size: 16px;
       font-weight: 600;
       color: #000;
       background-color: #f5df4e;
-      padding: 0.4em 0.4em;
+      padding: 0.6em 1.2em;
+      border-radius: 25px;
+
+      &:hover {
+        background-color: darken(#f5df4e, 8%);
+      }
+
+      @media (min-width:$screen-xl) {
+        font-size: 22px;
+        padding: 0.4em 1em;
+      }
     }
   }
 }

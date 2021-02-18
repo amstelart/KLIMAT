@@ -7,7 +7,10 @@
   $block-name:                &; // #{$block-name}__element
 
   padding: 1rem 0;
-  margin: 0 30px 30px 30px;
+
+  @media (min-width:$screen-xl) {
+    margin: 0 30px 30px 30px;
+  }
 
   &__accordion {
     margin-top: -1px;
@@ -26,9 +29,9 @@
     border-left: none;
     border-right: none;
     display: block;
-    font-size: 24px;
     text-transform: uppercase;
-    padding: 30px 280px 30px 68px;
+    font-size: 16px;
+    padding: 20px 40px 20px 15px;
     color: #000;
     text-align: left;
     width: 100%;
@@ -36,22 +39,34 @@
 
     &::before {
       content: "";
-      width: 32px;
-      height: 32px;
+      width: 18px;
+      height: 18px;
       position: absolute;
       top: 50%;
-      right: 70px;
-      margin-top: -16px;
+      right: 15px;
+      margin-top: -10px;
       transform: rotate(0deg);
       background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAARCAYAAAC8XK78AAAApklEQVRIib3TPQqDQBBA4Qc5gzfwJKmDZRo7L5EUOYB4He+RWrASPEMKSUhYcGCRDa66MwPb7A/faxbgBLTAE8ixmTPQA43TMuA7r9EgwuGv2Rtk82YU4eMTcPEP78oRS7wIXdKKiMK1IjbhqSN24akiDuFHI5LgMo+NEUlxmToyQgWPjVDF1yJM8H8RlYe/tfFQhKwPUFrgoQhzXMZ90Q647noN/ABvpWkCjV5XAQAAAABJRU5ErkJggg==');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100%;
       transition: transform 0.3s;
+
+      @media (min-width:$screen-xl) {
+        margin-top: -16px;
+        width: 32px;
+        height: 32px;
+        right: 70px;
+      }
     }
 
     &:focus {
       outline: none;
+    }
+
+    @media (min-width:$screen-xl) {
+      font-size: 24px;
+      padding: 30px 280px 30px 68px;
     }
   }
 

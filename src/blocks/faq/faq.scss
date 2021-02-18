@@ -12,15 +12,16 @@
   border-bottom: 1px solid #b5b5b5;
 
   &__container {
-    max-width: 1006px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: auto;
+    @include container;
   }
 
   &__title {
     margin-top: 0;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     text-transform: uppercase;
+
+    @media (min-width:$screen-lg) {
+      margin-bottom: 60px;
+    }
   }
 }

@@ -11,10 +11,7 @@
   background: #f5f5f5;
 
   &__container {
-    max-width: 1036px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: auto;
+    @include container;
   }
 
   &__title {
@@ -34,11 +31,10 @@
 
   &__item {
     position: relative;
-    max-width: 50%;
-    flex-basis: 50%;
-    padding-left: 60px;
-    padding-right: 20px;
-    font-size: 24px;
+    flex: 0 0 100%;
+    padding-left: 80px;
+    padding-right: 40px;
+    font-size: 16px;
     color: #787879;
     line-height: 1.1;
     margin-bottom: 60px;
@@ -50,10 +46,20 @@
       font-weight: 600;
       font-size: 60px;
       position: absolute;
-      top: 0;
-      left: 0;
+      top: -5px;
+      left: 14px;
       color: #f5df4e;
       text-shadow: -5px 3px 1px rgba(87, 86, 86, 0.7);
+    }
+
+    @media (min-width:$screen-md) {
+      flex: 0 0 50%;
+      font-size: 18px;
+      min-height: 70px;
+    }
+
+    @media (min-width:$screen-xl) {
+      font-size: 24px;
     }
   }
 }

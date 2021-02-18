@@ -3,6 +3,7 @@
     "page": [],
     "is-mobile": [],
     "btn": [],
+    "burger": [],
     "page-header": [],
     "page-footer": [],
     "main-nav": [],
@@ -52,7 +53,9 @@
   "addCssAfter": [
     "./src/scss/print.scss"
   ],
-  "singleCompiled": [],
+  "singleCompiled": [
+    "./src/scss/plug.scss"
+  ],
   "addJsBefore": [
     "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/jquery-migrate/dist/jquery-migrate.min.js",

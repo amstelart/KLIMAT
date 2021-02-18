@@ -6,9 +6,13 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  height: 100vh;
   position: relative;
   background-size: cover;
+
+  @media (min-width:$screen-lg) {
+    height: 100vh;
+    min-height: 800px;
+  }
 
   &:before {
     content: "";
@@ -22,60 +26,108 @@
   }
 
   &__container {
+    @include container;
     position: relative;
     height: 100%;
-    max-width: 1170px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 120px;
+    padding-bottom: 60px;
     margin: auto;
     display: flex;
     align-items: center;
     z-index: 1;
+
+    @media (min-width:$screen-lg) {
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
   }
 
   &__box {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
   }
 
   &__caption {
-    flex-basis: 50%;
-    max-width: 50%;
     padding-right: 15px;
+    flex: 0 0 100%;
+
+    @media (min-width:$screen-lg) {
+      flex: 0 0 40%;
+    }
+    @media (min-width:$screen-xl) {
+      flex: 0 0 50%;
+    }
+
+    @media (max-width:($screen-md - 1)) {
+      display: none;
+    }
   }
 
   &__calc {
-    padding-left: 15px;
-    flex-basis: 50%;
-    max-width: 50%;
+    flex: 0 0 100%;
+
+    @media (min-width:$screen-lg) {
+      flex: 0 0 60%;
+      padding-left: 15px;
+    }
+    @media (min-width:$screen-xl) {
+      flex: 0 0 50%;
+    }
   }
 
   &__title {
     color: #fff;
     font-weight: 400;
-    margin-bottom: 40px;
+    margin-top: 0;
+    margin-bottom: 17px;
+    text-align: center;
+
+    @media (min-width:$screen-lg) {
+      font-size: 64px;
+      margin-bottom: 40px;
+      text-align: left;
+    }
 
     span {
-      display: block;
       line-height: 1;
+      display: inline;
+      margin: 0 5px;
+
+      @media (min-width:$screen-lg) {
+        display: block;
+      }
     }
     .t1 {
-      font-size: 100px;
+      @media (min-width:$screen-xl) {
+        font-size: 100px;
+      }
     }
     .t2 {
-      font-size: 80px;
+      @media (min-width:$screen-xl) {
+        font-size: 80px;
+      }
     }
     .t3 {
-      font-size: 70px;
+      @media (min-width:$screen-xl) {
+        font-size: 70px;
+      }
     }
   }
 
   &__text {
     color: #fff;
-    font-size: 24px;
+    font-size: 18px;
+    text-align: center;
+
+    @media (min-width:$screen-lg) {
+      text-align: left;
+    }
+
+    @media (min-width:$screen-xl) {
+      font-size: 24px;
+    }
   }
 }

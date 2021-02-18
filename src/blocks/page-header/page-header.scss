@@ -6,19 +6,31 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 26px 0;
-  z-index: 2;
+  padding: 15px 0;
+  z-index: 50;
+  transition: all 0.3s ease 0s;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+  }
+
+  @media (min-width:$screen-xl) {
+    padding: 26px 0;
+  }
 
   &__container {
-    max-width: 1170px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: auto;
+    @include container;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,20 +38,89 @@
 
   &__logo {
     display: block;
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+    margin-right: 20px;
+    position: relative;
+    z-index: 3;
+    transition: all 0.3s ease 0s;
     img {
       display: block;
+    }
+
+    @media (min-width:$screen-xl) {
+      width: 98px;
+      height: 98px;
     }
   }
 
   &__choose-btn {
     border:none;
-    background-color: rgb(245, 223, 78);
+    background-color: #f5df4e;
     color: #333333;
-    border-radius: 22px;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 18px 30px;
+    font-size: 14px;
+    padding: 10px 16px;
+    white-space: normal;
+    font-weight: 700;
+    border-radius: 10px;
     text-transform: uppercase;
+    position: relative;
+    z-index: 3;
+
+    &:hover {
+      background-color: darken(#f5df4e, 8%);
+    }
+
+    @media (min-width:$screen-sm) {
+      border-radius: 22px;
+    }
+    @media (min-width:$screen-md) {
+      font-size: 14px;
+      padding: 12px 20px;
+      white-space: nowrap;
+    }
+
+    @media (min-width:$screen-xl) {
+      font-size: 18px;
+      padding: 18px 30px;
+      font-weight: 600;
+    }
+  }
+
+  &.shrink {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(53, 53, 53);
+    width: 100%;
+    margin: 0;
+    // animation: slideInDown  1s 1 ease-in-out;
+    z-index: 10;
+
+
+    @media (min-width:$screen-lg) {
+
+      padding: 10px 0;
+
+      #{$block-name}__logo {
+        width: 50px;
+        height: 50px;
+      }
+      #{$block-name}__choose-btn {
+        padding: 8px 26px;
+        font-size: 14px;
+      }
+    }
   }
 }
 
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}

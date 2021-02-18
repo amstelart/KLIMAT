@@ -73,6 +73,12 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width:($screen-lg - 1)) {
+    &.lock {
+      overflow: hidden;
+    }
+  }
 }
 
 [tabindex='-1']:focus {
@@ -205,8 +211,16 @@ h6 {
   color: currentColor;
 }
 
-h1 { font-size: $font-size-h1; } // stylelint-disable-line
-h2 { font-size: $font-size-h2; } // stylelint-disable-line
+h1 {
+  font-size: $font-size-h1;
+} // stylelint-disable-line
+h2 {
+  font-size: 28px;
+
+  @media (min-width:$screen-lg) {
+    font-size: $font-size-h2;
+  }
+} // stylelint-disable-line
 h3 { font-size: $font-size-h3; } // stylelint-disable-line
 h4 { font-size: $font-size-h4; } // stylelint-disable-line
 h5 { font-size: $font-size-h5; } // stylelint-disable-line
