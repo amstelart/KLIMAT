@@ -97,6 +97,24 @@ $( document ).ready(function() {
     ]
   });
 
+  $('.product-carousel').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    fade: true,
+    asNavFor: '.product-carousel-nav'
+  });
+  $('.product-carousel-nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.product-carousel',
+    dots: false,
+    arrows: false,
+    centerMode: false,
+    focusOnSelect: true
+  });
+
   $('.brand-left').click(function(){
     $('.brand__carousel').slick('slickPrev');
   });

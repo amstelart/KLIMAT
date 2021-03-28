@@ -1,0 +1,65 @@
+// В этом файле должны быть стили для БЭМ-блока catalog-card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.catalog-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+
+  }
+  &__view {
+    border: 1px solid #787879;
+    border-radius: 15px;
+    width: 100%;
+    padding-bottom: 100%;
+  }
+  &__body {
+
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+  &__info {
+
+  }
+  &__info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        &:first-child {
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+  &__action {
+    display: flex;
+  }
+  &__price {
+    span {
+      font-size: 28px;
+      font-weight: 700;
+    }
+  }
+  &__btn {
+    .btn {
+      background-color: #f5df4e;
+      text-transform: uppercase;
+      font-size: 17px;
+      font-weight: 600;
+    }
+  }
+}

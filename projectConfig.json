@@ -30,6 +30,9 @@
       "--error"
     ],
     "field-actions": [],
+    "breadcrumbs": [],
+    "pagination": [],
+    "tabs": [],
     "intro": [],
     "calc-form": [],
     "brand": [],
@@ -42,7 +45,11 @@
     "map": [],
     "product-card": [],
     "aria-accordion": [],
-    "header-nav": []
+    "header-nav": [],
+    "catalog": [],
+    "catalog-card": [],
+    "filter-group": [],
+    "product": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
