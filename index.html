@@ -1,4 +1,9 @@
-<!DOCTYPE html><html class="no-js  page" lang="ru"><head>  <meta charset="utf-8">  <title>KLIMAT</title>  <meta name="description" content>  <!--DEV Такой комментарий не попадет в собранный HTML  <meta name="viewport" content="width=1000">  -->  <meta name="viewport" content="width=device-width, initial-scale=1">  <!--DEV Edge и ряд мобильных браузеров автоматом преобразуют телефоны в ссылки. Отключим это. -->  <meta name="format-detection" content="telephone=no">  <link rel="preconnect" href="https://fonts.gstatic.com">  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">  <link href="css/style.min.css" rel="stylesheet" media="screen">  <script>    // Маркер работающего javascript    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');    document.addEventListener('DOMContentLoaded', function(){      if (window.isMobile !== undefined) {        // console.log(isMobile);        if(isMobile.any) {          var rootClasses = ' is-mobile';          for (key in isMobile) {            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;            if(typeof isMobile[key] === 'object' && key !== 'other') {              for (type in isMobile[key]) {                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;              }            }          }          document.documentElement.className += rootClasses;        }      }      else {        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');      }    });  </script>  <!--DEV Перед </head> при сборке будут вставлены ссылки на favicon и служебные файлы --><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>KLIMAT</title>
+  <meta name="description" content>  <meta name="viewport" content="width=device-width, initial-scale=1">  <!--DEV Edge и ряд мобильных браузеров автоматом преобразуют телефоны в ссылки. Отключим это. -->  <meta name="format-detection" content="telephone=no">  <link rel="preconnect" href="https://fonts.gstatic.com">  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">  <link href="css/style.min.css" rel="stylesheet" media="screen">  <script>    // Маркер работающего javascript    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');    document.addEventListener('DOMContentLoaded', function(){      if (window.isMobile !== undefined) {        // console.log(isMobile);        if(isMobile.any) {          var rootClasses = ' is-mobile';          for (key in isMobile) {            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;            if(typeof isMobile[key] === 'object' && key !== 'other') {              for (type in isMobile[key]) {                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;              }            }          }          document.documentElement.className += rootClasses;        }      }      else {        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');      }    });  </script>  <!--DEV Перед </head> при сборке будут вставлены ссылки на favicon и служебные файлы --><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
 <link rel="manifest" href="/img/site.webmanifest">
@@ -7,10 +12,10 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
 <meta name="msapplication-config" content="/img/browserconfig.xml">
-<meta name="theme-color" content="#ffffff"></head><body>  <div class="page__inner">    <div class="page__content">      <!--DEV
-      Нужно убрать пробел между @-ами:
-      @ @include('blocks/page-header/page-header.html')
-      -->
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="page__inner">
+    <div class="page__content">
       <header class="page-header" role="banner">
         <div class="page-header__container">
           <a href="/" class="page-header__logo"><img src="img/logo.svg" alt="Климат"></a>
@@ -32,4 +37,391 @@
           <div class="burger header-nav__toggler"><span></span></div>
         </div>
       </header>
-      <div class="intro" style="background-image: url('img/intro.jpg');">        <div class="intro__container">          <div class="intro__box">            <div class="intro__caption">              <h1 class="intro__title"><span class="t1">Климат</span><span class="t2">Вашего</span><span class="t3">Дома</span></h1>              <p class="intro__text">Продажа, установка, обслуживание кондиционеров</p>            </div>            <div class="intro__calc">              <form class="calc-form">                <div class="calc-form__group">                  <label class="field-select field-select--calc">                    <div class="field-select__name">Тип кондиционера</div>                    <div class="field-select__select-wrap">                      <select class="field-select__select" id name>                        <option>Настенный</option>                        <option>Значение 2</option>                        <option>Значение 3</option>                      </select>                    </div>                  </label>                  <label class="field-select field-select--calc">                    <div class="field-select__name">Производитель</div>                    <div class="field-select__select-wrap">                      <select class="field-select__select" id name>                        <option>Gree</option>                        <option>Значение 2</option>                        <option>Значение 3</option>                      </select>                    </div>                  </label>                  <label class="field-select field-select--calc">                    <div class="field-select__name">Уровень шума</div>                    <div class="field-select__select-wrap">                      <select class="field-select__select" id name>                        <option>До 20 дБа</option>                        <option>Значение 2</option>                        <option>Значение 3</option>                      </select>                    </div>                  </label>                  <label class="field-select field-select--calc">                    <div class="field-select__name">Очистка воздуха</div>                    <div class="field-select__select-wrap">                      <select class="field-select__select" id name>                        <option>Стандарт</option>                        <option>Значение 2</option>                        <option>Значение 3</option>                      </select>                    </div>                  </label>                  <label class="field-select field-select--calc">                    <div class="field-select__name">Назначение</div>                    <div class="field-select__select-wrap">                      <select class="field-select__select" id name>                        <option>Для дома</option>                        <option>Значение 2</option>                        <option>Значение 3</option>                      </select>                    </div>                  </label>                  <label class="field-select field-select--calc">                    <div class="field-select__name">Площадь</div>                    <div class="field-select__select-wrap">                      <select class="field-select__select" id name>                        <option>10-20 м.кв</option>                        <option>Значение 2</option>                        <option>Значение 3</option>                      </select>                    </div>                  </label>                </div>                <div class="calc-form__action">                  <button type="submit" class="btn">Подобрать</button>                </div>              </form>            </div>          </div>        </div>      </div>      <main role="main">        <div class="brand">          <div class="brand__container">            <div class="brand-left"></div>            <div class="brand__carousel">              <div class="brand__item">                <img src="img/logo-brand-01.png" alt class="brand__logo">              </div>              <div class="brand__item">                <img src="img/logo-brand-02.png" alt class="brand__logo">              </div>              <div class="brand__item">                <img src="img/logo-brand-03.png" alt class="brand__logo">              </div>              <div class="brand__item">                <img src="img/logo-brand-04.png" alt class="brand__logo">              </div>              <div class="brand__item">                <img src="img/logo-brand-05.png" alt class="brand__logo">              </div>              <div class="brand__item">                <img src="img/logo-brand-01.png" alt class="brand__logo">              </div>              <div class="brand__item">                <img src="img/logo-brand-02.png" alt class="brand__logo">              </div>              <div class="brand__item">                <img src="img/logo-brand-03.png" alt class="brand__logo">              </div>              <div class="brand__item">                <img src="img/logo-brand-04.png" alt class="brand__logo">              </div>              <div class="brand__item">                <img src="img/logo-brand-05.png" alt class="brand__logo">              </div>            </div>            <!-- <div class="brand__nav">              <div class="brand-left"></div>            </div> -->            <div class="brand-right"></div>          </div>        </div>        <div class="product-box">          <div class="product-box__container">            <ul class="product-box__nav">              <li class="active"><a href="#">Новинки</a></li>              <li><a href="#">Скидки</a></li>              <li><a href="#">Хиты продаж</a></li>            </ul>            <div class="product-box__carousel">              <div class="product-box__item">                <div class="product-card">                  <div class="product-card__view">                    <div class="product-card__label product-card__label--new">Новинка</div>                    <a href="#" class="product-card__img-wrap">                      <img src="img/product-card-img-01.jpg" alt class="product-card__img">                    </a>                  </div>                  <div class="product-card__title">                    <a href="#">Настенная сплит-система                    Gree U-Crown Inverter                    GWH18UC-K6DNA4A R32</a></div>                  <div class="product-card__price"><span>152 600 р.</span></div>                  <div class="product-card__action">                    <div class="btn">Добавить в корзину</div>                  </div>                </div>              </div>              <div class="product-box__item">                <div class="product-card">                  <div class="product-card__view">                    <div class="product-card__label product-card__label--new">Новинка</div>                    <a href="#" class="product-card__img-wrap">                      <img src="img/product-card-img-01.jpg" alt class="product-card__img">                    </a>                  </div>                  <div class="product-card__title">                    <a href="#">Настенная сплит-система                    Gree U-Crown Inverter                    GWH18UC-K6DNA4A R32</a></div>                  <div class="product-card__price"><span>152 600 р.</span></div>                  <div class="product-card__action">                    <div class="btn">Добавить в корзину</div>                  </div>                </div>              </div>              <div class="product-box__item">                <div class="product-card">                  <div class="product-card__view">                    <div class="product-card__label product-card__label--new">Новинка</div>                    <a href="#" class="product-card__img-wrap">                      <img src="img/product-card-img-01.jpg" alt class="product-card__img">                    </a>                  </div>                  <div class="product-card__title">                    <a href="#">Настенная сплит-система                    Gree U-Crown Inverter                    GWH18UC-K6DNA4A R32</a></div>                  <div class="product-card__price"><span>152 600 р.</span></div>                  <div class="product-card__action">                    <div class="btn">Добавить в корзину</div>                  </div>                </div>              </div>              <div class="product-box__item">                <div class="product-card">                  <div class="product-card__view">                    <div class="product-card__label product-card__label--new">Новинка</div>                    <a href="#" class="product-card__img-wrap">                      <img src="img/product-card-img-01.jpg" alt class="product-card__img">                    </a>                  </div>                  <div class="product-card__title">                    <a href="#">Настенная сплит-система                    Gree U-Crown Inverter                    GWH18UC-K6DNA4A R32</a></div>                  <div class="product-card__price"><span>152 600 р.</span></div>                  <div class="product-card__action">                    <div class="btn">Добавить в корзину</div>                  </div>                </div>              </div>            </div>          </div>        </div>        <section class="working">          <div class="working__container">            <h2 class="working__title">Как мы работаем</h2>            <ul class="working__list">              <li class="working__item">                Подберите понравившуюся модель                воспользовавшись каталогом              </li>              <li class="working__item">                Воспользуйтесь опцией выбора                дополнительных услуг              </li>              <li class="working__item">                Выберите дату установки                и укажите ваш адрес              </li>              <li class="working__item">                Оплатите заказ выбрав удобный                способ оплаты              </li>            </ul>          </div>        </section>        <section class="action-box action-box--dark">          <div class="action-box__container">            <a href class="btn">Не определились с моделью?</a>          </div>        </section>        <section class="services">          <div class="services__container">            <h2 class="services__title">Услуги</h2>            <ul class="services__list">              <div class="services__item services__item--01">                <div class="services__item-icon si-icon-01"></div>                <div class="services__item-caption">                  <div class="services__item-title">Установка</div>                  <div class="services__item-text">                    Производим установку <br>                    любой сложности                  </div>                  <a href="#" class="services__item-link">Подробнее</a>                </div>              </div>              <div class="services__item services__item--02">                <div class="services__item-icon si-icon-02"></div>                <div class="services__item-caption">                  <div class="services__item-title">ДИАГНОСТИКА / РЕМОНТ</div>                  <div class="services__item-text">                    Проверим и отремонтируем <br>                    ваш кондиционер                  </div>                  <a href="#" class="services__item-link">Подробнее</a>                </div>              </div>              <div class="services__item services__item--03">                <div class="services__item-icon si-icon-03"></div>                <div class="services__item-caption">                  <div class="services__item-title">Заправка</div>                  <div class="services__item-text">                    Проверим давление <br>                    и заправим ваш кондиционер                  </div>                  <a href="#" class="services__item-link">Подробнее</a>                </div>              </div>              <div class="services__item services__item--04">                <div class="services__item-icon si-icon-04"></div>                <div class="services__item-caption">                  <div class="services__item-title">ЗАМЕНА ФИЛЬТРОВ</div>                  <div class="services__item-text">                    Очистим или заменим <br>                    фильтрующие элементы                  </div>                  <a href="#" class="services__item-link">Подробнее</a>                </div>              </div>            </ul>          </div>        </section>        <section class="action-box action-box--yellow">          <div class="action-box__container">            <a href class="btn">Свяжитесь с нами</a>          </div>        </section>        <section class="faq">          <div class="faq__container">            <h2 class="faq__title">Часто задаваемые вопросы</h2>            <div class="accordion-group">              <section class="accordion-group__accordion accordion-group__accordion_expanded">                <header class="accordion-group__accordion-head">                  <h3 class="accordion-group__accordion-heading">                    <button type="button" class="accordion-group__accordion-btn">Какое время самое лучшее для выбора и приобретения кондиционера? </button>                  </h3>                </header>                <div class="accordion-group__accordion-panel">                  <div class="accordion-group__accordion-content">                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip                      ex ea commodo consequat. Duis aute                      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur                      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>                  </div>                </div>              </section>              <section class="accordion-group__accordion">                <header class="accordion-group__accordion-head">                  <h3 class="accordion-group__accordion-heading">                    <button type="button" class="accordion-group__accordion-btn">Как часто нужно менять фильтры? </button>                  </h3>                </header>                <div class="accordion-group__accordion-panel">                  <div class="accordion-group__accordion-content">                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip                      ex ea commodo consequat. Duis aute                      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur                      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>                  </div>                </div>              </section>              <section class="accordion-group__accordion">                <header class="accordion-group__accordion-head">                  <h3 class="accordion-group__accordion-heading">                    <button type="button" class="accordion-group__accordion-btn">Кондиционер в детской — не опасно ли? </button>                  </h3>                </header>                <div class="accordion-group__accordion-panel">                  <div class="accordion-group__accordion-content">                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip                      ex ea commodo consequat. Duis aute                      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur                      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>                  </div>                </div>              </section>              <section class="accordion-group__accordion">                <header class="accordion-group__accordion-head">                  <h3 class="accordion-group__accordion-heading">                    <button type="button" class="accordion-group__accordion-btn">Кондиционер только охлаждает? </button>                  </h3>                </header>                <div class="accordion-group__accordion-panel">                  <div class="accordion-group__accordion-content">                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip                      ex ea commodo consequat. Duis aute                      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur                      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>                  </div>                </div>              </section>            </div>          </div>        </section>        <section class="feedback">          <div class="feedback__container">            <h2 class="feedback__title">Оставить заявку</h2>            <form class="feedback__form">              <div class="feedback__form-row">                <div class="feedback__form-col">                  <label class="field-text field-text--feedback">                    <span class="field-text__input-wrap">                      <input class="field-text__input" type="text" placeholder="Ф.И.О" id name>                    </span>                  </label>                </div>                <div class="feedback__form-col">                  <label class="field-text field-text--feedback">                    <span class="field-text__input-wrap">                      <input class="field-text__input" type="text" placeholder="ТЕЛЕФОН" id name>                    </span>                  </label>                </div>              </div>              <label class="field-text field-text--feedback">                <span class="field-text__input-wrap">                  <textarea class="field-text__input" type="textarea" name id rows="5" placeholder="Опишите ваш впрос..."></textarea>                </span>              </label>              <div class="field-checkbox field-checkbox--feedback">                <div class="field-checkbox__input-wrap">                  <label class="field-checkbox__name">                    <input class="field-checkbox__input" type="checkbox" id name>                    <span class="field-checkbox__name-text">Нажимая кнопку "Отправить" вы даёте свое согласие на <a href="#">обработку персональных данных</a></span>                  </label>                </div>              </div>              <div class="field-actions field-actions--feedback">                <button class="btn" type="submit">Отправить</button>              </div>            </form>          </div>        </section>        <div class="map">          <img src="img/map.png" alt>        </div>      </main>    </div>    <div class="page__footer-wrapper">      <!--DEV      Нужно убрать пробел между @-ами:      @ @include('blocks/page-footer/page-footer.html')      -->      <footer class="page-footer" role="contentinfo">        <div class="page-footer__container">          <div class="page-footer__company">            <img class="page-footer__company-logo" src="img/logo-footer.svg" alt>            <div class="page-footer__company-caption">              <p>Мы - «о два ру». За нашими плечами 12 лет опыта в работе                с системами кондиционирования. Мы сопровождаем наших клиентов                получаем обратную связь и улучшаем качество сервиса.</p>              <p>Наша цель - сделать доступнымы кондиционеры для каждого</p>              <p>© o-dva.ru 2021<br>                сайт разработан на pixadelica.ru</p>            </div>          </div>          <div class="page-footer__contacts">            <div class="page-footer__contacts-group">              <p>ИП Акульшин Андрей Николаевич</p>              <p>ИНН 463226294886</p>              <p>г. Курск, ул. Дзержинского, 40</p>            </div>            <div class="page-footer__contacts-payment">              <div class="payment-item">                <img src="img/visa-logo.png" alt>              </div>              <div class="payment-item">                <img src="img/mastercard-logo.png" alt>              </div>              <div class="payment-item">                <img src="img/mir-logo.png" alt>              </div>            </div>            <div class="page-footer__contacts-group">              <p>+7 4712 54 64 54</p>              <p>sales@o-dva.ru</p>            </div>          </div>        </div>      </footer>    </div>  </div>  <!--DEV Такой комментарий не попадет в собранный HTML  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  <script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>  -->  <script src="js/script.min.js"></script></body></html>
+      <div class="intro" style="background-image: url('img/intro.jpg');">
+        <div class="intro__container">
+          <div class="intro__box">
+            <div class="intro__caption">
+              <h1 class="intro__title"><span>Климатические</span><span>решения</span></h1>
+              <p class="intro__text">для дома и офиса</p>
+            </div>
+            <div class="intro__calc">
+              <form class="calc-form">
+                <div class="calc-form__group">
+                  <label class="field-select field-select--calc">
+                    <div class="field-select__name">Тип кондиционера</div>
+                    <div class="field-select__select-wrap">
+                      <select class="field-select__select" id name>
+                        <option>Настенный</option>
+                        <option>Значение 2</option>
+                        <option>Значение 3</option>
+                      </select>
+                    </div>
+                  </label>
+                  <label class="field-select field-select--calc">
+                    <div class="field-select__name">Производитель</div>
+                    <div class="field-select__select-wrap">
+                      <select class="field-select__select" id name>
+                        <option>Gree</option>
+                        <option>Значение 2</option>
+                        <option>Значение 3</option>
+                      </select>
+                    </div>
+                  </label>
+                  <label class="field-select field-select--calc">
+                    <div class="field-select__name">Уровень шума</div>
+                    <div class="field-select__select-wrap">
+                      <select class="field-select__select" id name>
+                        <option>До 20 дБа</option>
+                        <option>Значение 2</option>
+                        <option>Значение 3</option>
+                      </select>
+                    </div>
+                  </label>
+                  <label class="field-select field-select--calc">
+                    <div class="field-select__name">Очистка воздуха</div>
+                    <div class="field-select__select-wrap">
+                      <select class="field-select__select" id name>
+                        <option>Стандарт</option>
+                        <option>Значение 2</option>
+                        <option>Значение 3</option>
+                      </select>
+                    </div>
+                  </label>
+                  <label class="field-select field-select--calc">
+                    <div class="field-select__name">Назначение</div>
+                    <div class="field-select__select-wrap">
+                      <select class="field-select__select" id name>
+                        <option>Для дома</option>
+                        <option>Значение 2</option>
+                        <option>Значение 3</option>
+                      </select>
+                    </div>
+                  </label>
+                  <label class="field-select field-select--calc">
+                    <div class="field-select__name">Площадь</div>
+                    <div class="field-select__select-wrap">
+                      <select class="field-select__select" id name>
+                        <option>10-20 м.кв</option>
+                        <option>Значение 2</option>
+                        <option>Значение 3</option>
+                      </select>
+                    </div>
+                  </label>
+                </div>
+                <div class="calc-form__action">
+                  <button type="submit" class="btn">Подобрать</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <main role="main">
+        <div class="brand">
+          <div class="brand__container">
+            <div class="brand-left"></div>
+            <div class="brand__carousel">
+              <div class="brand__item">
+                <img src="img/logo-brand-01.png" alt class="brand__logo">
+              </div>
+              <div class="brand__item">
+                <img src="img/logo-brand-02.png" alt class="brand__logo">
+              </div>
+              <div class="brand__item">
+                <img src="img/logo-brand-03.png" alt class="brand__logo">
+              </div>
+              <div class="brand__item">
+                <img src="img/logo-brand-04.png" alt class="brand__logo">
+              </div>
+              <div class="brand__item">
+                <img src="img/logo-brand-05.png" alt class="brand__logo">
+              </div>
+              <div class="brand__item">
+                <img src="img/logo-brand-01.png" alt class="brand__logo">
+              </div>
+              <div class="brand__item">
+                <img src="img/logo-brand-02.png" alt class="brand__logo">
+              </div>
+              <div class="brand__item">
+                <img src="img/logo-brand-03.png" alt class="brand__logo">
+              </div>
+              <div class="brand__item">
+                <img src="img/logo-brand-04.png" alt class="brand__logo">
+              </div>
+              <div class="brand__item">
+                <img src="img/logo-brand-05.png" alt class="brand__logo">
+              </div>
+            </div>
+            <!-- <div class="brand__nav">
+              <div class="brand-left"></div>
+            </div> -->
+            <div class="brand-right"></div>
+          </div>
+        </div>
+        <div class="product-box">
+          <div class="product-box__container">
+            <ul class="product-box__nav">
+              <li class="active"><a href="#">Новинки</a></li>
+              <li><a href="#">Флагманы</a></li>
+              <li><a href="#">Скидки</a></li>
+            </ul>
+            <div class="product-box__carousel">
+              <div class="product-box__item">
+                <div class="product-card">
+                  <div class="product-card__view">
+                    <!-- <div class="product-card__label product-card__label--new">Новинка</div> -->
+                    <a href="#" class="product-card__img-wrap">
+                      <img src="img/product-card-img-01.jpg" alt class="product-card__img">
+                    </a>
+                  </div>
+                  <div class="product-card__title">
+                    <a href="#">Настенная сплит-система
+                    Gree U-Crown Inverter
+                    GWH18UC-K6DNA4A R32</a></div>
+                  <div class="product-card__price"><span>152 600 р.</span></div>
+                  <div class="product-card__action">
+                    <div class="btn">Заказать</div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box__item">
+                <div class="product-card">
+                  <div class="product-card__view">
+                    <!-- <div class="product-card__label product-card__label--new">Новинка</div> -->
+                    <a href="#" class="product-card__img-wrap">
+                      <img src="img/product-card-img-01.jpg" alt class="product-card__img">
+                    </a>
+                  </div>
+                  <div class="product-card__title">
+                    <a href="#">Настенная сплит-система
+                    Gree U-Crown Inverter
+                    GWH18UC-K6DNA4A R32</a></div>
+                  <div class="product-card__price"><span>152 600 р.</span></div>
+                  <div class="product-card__action">
+                    <div class="btn">Заказать</div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box__item">
+                <div class="product-card">
+                  <div class="product-card__view">
+                    <!-- <div class="product-card__label product-card__label--new">Новинка</div> -->
+                    <a href="#" class="product-card__img-wrap">
+                      <img src="img/product-card-img-01.jpg" alt class="product-card__img">
+                    </a>
+                  </div>
+                  <div class="product-card__title">
+                    <a href="#">Настенная сплит-система
+                    Gree U-Crown Inverter
+                    GWH18UC-K6DNA4A R32</a></div>
+                  <div class="product-card__price"><span>152 600 р.</span></div>
+                  <div class="product-card__action">
+                    <div class="btn">Заказать</div>
+                  </div>
+                </div>
+              </div>
+              <div class="product-box__item">
+                <div class="product-card">
+                  <div class="product-card__view">
+                    <!-- <div class="product-card__label product-card__label--new">Новинка</div> -->
+                    <a href="#" class="product-card__img-wrap">
+                      <img src="img/product-card-img-01.jpg" alt class="product-card__img">
+                    </a>
+                  </div>
+                  <div class="product-card__title">
+                    <a href="#">Настенная сплит-система
+                    Gree U-Crown Inverter
+                    GWH18UC-K6DNA4A R32</a></div>
+                  <div class="product-card__price"><span>152 600 р.</span></div>
+                  <div class="product-card__action">
+                    <div class="btn">Добавить в корзину</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="working">
+          <div class="working__container">
+            <h2 class="working__title"><span class="title-dekor">Как мы работаем</span></h2>
+            <ul class="working__list">
+              <li class="working__item">
+                Найдите свою модель используя каталог
+              </li>
+              <li class="working__item">
+                Настройте свои дополнительные опции
+              </li>
+              <li class="working__item">
+                Выберите дату и место установки
+              </li>
+              <li class="working__item">
+                Выберите <br> способ оплаты
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="action-box action-box--dark">
+          <div class="action-box__container">
+            <a href class="btn">Ваш первый кондиционер?</a>
+          </div>
+        </section>
+        <section class="services">
+          <div class="services__container">
+            <h2 class="services__title"><span class="title-dekor">Услуги</span></h2>
+            <ul class="services__list">
+              <div class="services__item services__item--01">
+                <div class="services__item-icon si-icon-01"></div>
+                <div class="services__item-caption">
+                  <div class="services__item-title">Установка</div>
+                  <div class="services__item-text">
+                    <span>узнайте о видах монтажа</span><span>из нашей статьи</span>
+                  </div>
+                  <a href="#" class="services__item-link">Читать</a>
+                </div>
+              </div>
+              <div class="services__item services__item--02">
+                <div class="services__item-icon si-icon-02"></div>
+                <div class="services__item-caption">
+                  <div class="services__item-title">Сервис</div>
+                  <div class="services__item-text">
+                    <span>сопровождение клиента</span><span>по доступным тарифам</span>
+                  </div>
+                  <a href="#" class="services__item-link">Подробнее</a>
+                </div>
+              </div>
+              <div class="services__item services__item--03">
+                <div class="services__item-icon si-icon-03"></div>
+                <div class="services__item-caption">
+                  <div class="services__item-title">Диагностика</div>
+                  <div class="services__item-text">
+                    <span>не знаете в чем проблема?</span><span>мы расскажем</span>
+                  </div>
+                  <a href="#" class="services__item-link">Читать</a>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </section>
+        <section class="action-box action-box--yellow">
+          <div class="action-box__container">
+            <a href class="btn">Опишите свою задачу</a>
+          </div>
+        </section>
+        <section class="faq">
+          <div class="faq__container">
+            <h2 class="faq__title"><span class="title-dekor">Часто задаваемые вопросы</span></h2>
+            <div class="accordion-group">
+              <section class="accordion-group__accordion accordion-group__accordion_expanded">
+                <header class="accordion-group__accordion-head">
+                  <h3 class="accordion-group__accordion-heading">
+                    <button type="button" class="accordion-group__accordion-btn">Инверторный или on/off? </button>
+                  </h3>
+                </header>
+                <div class="accordion-group__accordion-panel">
+                  <div class="accordion-group__accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                      ex ea commodo consequat. Duis aute
+                      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                </div>
+              </section>
+              <section class="accordion-group__accordion">
+                <header class="accordion-group__accordion-head">
+                  <h3 class="accordion-group__accordion-heading">
+                    <button type="button" class="accordion-group__accordion-btn">Частота диагностики и необходимость ее проведения</button>
+                  </h3>
+                </header>
+                <div class="accordion-group__accordion-panel">
+                  <div class="accordion-group__accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                      ex ea commodo consequat. Duis aute
+                      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                </div>
+              </section>
+              <section class="accordion-group__accordion">
+                <header class="accordion-group__accordion-head">
+                  <h3 class="accordion-group__accordion-heading">
+                    <button type="button" class="accordion-group__accordion-btn">Работа кондиционера в холодное время года </button>
+                  </h3>
+                </header>
+                <div class="accordion-group__accordion-panel">
+                  <div class="accordion-group__accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                      ex ea commodo consequat. Duis aute
+                      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                </div>
+              </section>
+              <section class="accordion-group__accordion">
+                <header class="accordion-group__accordion-head">
+                  <h3 class="accordion-group__accordion-heading">
+                    <button type="button" class="accordion-group__accordion-btn">Кондиционер только охлаждает? </button>
+                  </h3>
+                </header>
+                <div class="accordion-group__accordion-panel">
+                  <div class="accordion-group__accordion-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                      ex ea commodo consequat. Duis aute
+                      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+        <section class="feedback">
+          <div class="feedback__container">
+            <h2 class="feedback__title">Оставить заявку</h2>
+            <form class="feedback__form">
+              <div class="feedback__form-row">
+                <div class="feedback__form-col">
+                  <label class="field-text field-text--feedback">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Ф.И.О" id name>
+                    </span>
+                  </label>
+                </div>
+                <div class="feedback__form-col">
+                  <label class="field-text field-text--feedback">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="ТЕЛЕФОН" id name>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <label class="field-text field-text--feedback">
+                <span class="field-text__input-wrap">
+                  <textarea class="field-text__input" type="textarea" name id rows="5" placeholder="Опишите ваш впрос..."></textarea>
+                </span>
+              </label>
+              <div class="field-checkbox field-checkbox--feedback">
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox" id name>
+                    <span class="field-checkbox__name-text">Нажимая кнопку "Отправить" вы даёте свое согласие на <a href="#">обработку персональных данных</a></span>
+                  </label>
+                </div>
+              </div>
+              <div class="field-actions field-actions--feedback">
+                <button class="btn" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <div class="map">
+          <img src="img/map.png" alt>
+        </div>
+      </main>
+    </div>
+    <div class="page__footer-wrapper">      <footer class="page-footer" role="contentinfo">        <div class="page-footer__container">          <div class="page-footer__company">            <img class="page-footer__company-logo" src="img/logo-footer.svg" alt>            <div class="page-footer__company-caption">              <p>Мы - «о два ру». За нашими плечами 12 лет опыта в работе                с системами кондиционирования. Мы сопровождаем наших клиентов                получаем обратную связь и улучшаем качество сервиса.</p>              <p>Наша цель - сделать доступнымы кондиционеры для каждого</p>              <p>© o-dva.ru 2021<br>                сайт разработан на pixadelica.ru</p>            </div>          </div>          <div class="page-footer__contacts">            <div class="page-footer__contacts-group">              <p>ИП Акульшин Андрей Николаевич</p>              <p>ИНН 463226294886</p>              <p>г. Курск, ул. Дзержинского, 40</p>            </div>            <div class="page-footer__contacts-payment">              <div class="payment-item">                <img src="img/visa-logo.png" alt>              </div>              <div class="payment-item">                <img src="img/mastercard-logo.png" alt>              </div>              <div class="payment-item">                <img src="img/mir-logo.png" alt>              </div>            </div>            <div class="page-footer__contacts-group">              <p>+7 4712 54 64 54</p>              <p>sales@o-dva.ru</p>            </div>          </div>        </div>      </footer>    </div>
+  </div>  <script src="js/script.min.js"></script></body>
+</html>
