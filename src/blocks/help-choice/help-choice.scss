@@ -1,0 +1,37 @@
+// В этом файле должны быть стили для БЭМ-блока help-choice, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.help-choice {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin-bottom: 40px;
+
+  &__item {
+
+  }
+
+  &__title {
+    padding: 20px 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+
+    @media (max-width: $screen-lg - 1) {
+      font-size: 16px;
+      margin-bottom: 10px;
+      padding: 10px 0;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+
+    @media (max-width: $screen-lg - 1) {
+      font-size: 14px;
+    }
+  }
+}

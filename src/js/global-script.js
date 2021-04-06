@@ -24,8 +24,8 @@ $( document ).ready(function() {
   // fix top-menu === end
 
   $('.product-box__carousel').slick({
-    arrows:true,
-    dots: true,
+    arrows:false,
+    dots: false,
     infinite: true,
     adaptiveHeight: true,
     speed: 300,
@@ -132,6 +132,128 @@ $( document ).ready(function() {
     contentRole: ['document', 'application', 'document'],
     slideSpeed: 400
   });
+
+  // range-slider
+  $(function () {
+
+    var $range = $(".js-range-slider"),
+      $inputFrom = $(".js-input-from"),
+      $inputTo = $(".js-input-to"),
+      instance,
+      min = 0,
+      max = 100000,
+      from = 0,
+      to = 0;
+
+    $range.ionRangeSlider({
+      type: "double",
+      skin: "round",
+      min: min,
+      max: max,
+      from: 0,
+      to: 100000,
+      hide_min_max: true,
+      hide_from_to: true,
+
+      onStart: updateInputs,
+      onChange: updateInputs,
+      step: 100,
+      prettify_enabled: true,
+      prettify_separator: ".",
+      values_separator: " - ",
+      force_edges: true
+    });
+
+    instance = $range.data("ionRangeSlider");
+
+    function updateInputs(data) {
+      from = data.from;
+      to = data.to;
+
+      $inputFrom.prop("value", from);
+      $inputTo.prop("value", to);
+    }
+
+    $inputFrom.on("input", function () {
+      var val = $(this).prop("value");
+
+      // validate
+      if (val < min) {
+        val = min;
+      } else if (val > to) {
+        val = to;
+      }
+
+      instance.update({
+        from: val
+      });
+    });
+
+    $inputTo.on("input", function () {
+      var val = $(this).prop("value");
+
+      // validate
+      if (val < from) {
+        val = from;
+      } else if (val > max) {
+        val = max;
+      }
+
+      instance.update({
+        to: val
+      });
+    });
+
+  });
+});
+
+(function( $ ){
+  $.fn.appendAround = function(){
+    return this.each(function(){
+
+      var $self = $( this ),
+          att = "data-set",
+          $parent = $self.parent(),
+          parent = $parent[ 0 ],
+          attval = $parent.attr( att ),
+          $set = $( "["+ att +"='" + attval + "']" );
+
+      function isHidden( elem ){
+        return $(elem).css( "display" ) === "none";
+      }
+
+      function appendToVisibleContainer(){
+        if( isHidden( parent ) ){
+          var found = 0;
+          $set.each(function(){
+            if( !isHidden( this ) && !found ){
+              $self.appendTo( this );
+              found++;
+              parent = this;
+            }
+          });
+        }
+      }
+
+      appendToVisibleContainer();
+
+      $(window).bind( "resize", appendToVisibleContainer );
+
+    });
+  };
+}( jQuery ));
+
+$( function(){
+  $( document ).trigger( "enhance" );
+
+  $( '#left' ).offcanvas( {
+    modifiers: "left,overlay",
+    triggerButton: '.js-offcanvas-toggler',
+    onInit :  function() {
+      $(this).removeClass('is-hidden');
+    }
+  } );
+  $( ".filter-group" ).appendAround();
 });
 
 // Изоляция без jQuery

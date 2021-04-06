@@ -19,6 +19,20 @@
     flex-basis: 293px;
     flex-shrink: 0;
     padding-right: 30px;
+
+    // @media (max-width: $screen-xl - 1) {
+    //   max-width: 240px;
+    //   flex-basis: 240px;
+    // }
+    @media (max-width: $screen-lg - 1) {
+      display: none;
+    }
+  }
+
+  &__sidebar-filter {
+    @media (max-width: $screen-lg - 1) {
+      display: none;
+    }
   }
 
   &__sidebar-brands {
@@ -36,42 +50,12 @@
     flex-grow: 1;
   }
 
-  &__group-cards {
+  &__group-title {
+    margin-bottom: 20px;
+  }
 
-    &.list {
-      display: flex;
-      flex-wrap: wrap;
-      .catalog-card {
-        flex-basis: 100%;
-        max-width: 100%;
-        margin-bottom: 50px;
-      }
-      .catalog-card__inner {
-        display: flex;
-      }
-      .catalog-card__view {
-        flex-shrink: 0;
-        max-width: 200px;
-        flex-basis: 200px;
-        padding-bottom: 200px;
-        margin-right: 25px;
-      }
-      .catalog-card__body {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      .catalog-card__title {
-        flex-basis: 100%;
-        max-width: 100%;
-      }
-      .catalog-card__info {
-        flex-grow: 1;
-        margin-right: 30px;
-      }
-      .catalog-card__action {
-        display: block;
-      }
-    }
+  &__group-options {
+    margin-bottom: 20px;
   }
 }
 

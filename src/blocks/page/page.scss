@@ -74,7 +74,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @media (max-width:($screen-lg - 1)) {
+  @media (max-width:($screen-xl - 1)) {
+    font-size: 14px;
     &.lock {
       overflow: hidden;
     }
@@ -350,5 +351,24 @@ pre {
 
   code {
     background: transparent;
+  }
+}
+
+.title-dekor {
+  vertical-align: middle;
+  &:after {
+    content: "";
+    width: 83px;
+    height: 56px;
+    display: inline-block;
+    background-image: url(../img/title-icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+    margin-left: 70px;
+
+    @media (max-width:($screen-md - 1)) {
+      display: none;
+    }
   }
 }

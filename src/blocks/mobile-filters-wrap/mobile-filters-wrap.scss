@@ -1,0 +1,24 @@
+// В этом файле должны быть стили для БЭМ-блока mobile-filters-wrap, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.c-offcanvas__head {
+  padding: 10px 10px 0 10px;
+
+  .btn {
+    width: 100%;
+    font-weight: 500;
+  }
+}
+.c-offcanvas--left {
+  width: 260px;
+}
+
+.mobile-filters-wrap {
+
+  $block-name:                &; // #{$block-name}__element
+
+  @media (min-width: $screen-lg) {
+    display: none!important
+  }
+}

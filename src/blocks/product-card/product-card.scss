@@ -10,6 +10,9 @@
     position: relative;
     border: 1px solid #787879;
     margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
   }
 
   &__img-wrap {
@@ -67,7 +70,7 @@
     font-weight: 700;
     line-height: 1.2;
     color: #787879;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     span {
       white-space: nowrap;
     }
@@ -86,12 +89,16 @@
       font-size: 16px;
       font-weight: 600;
       color: #000;
+      text-transform: uppercase;
       background-color: #f5df4e;
       padding: 0.6em 1.2em;
-      border-radius: 25px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 260px;
 
       &:hover {
-        background-color: darken(#f5df4e, 8%);
+        background-color:#333333;
+        color: #f5df4e;
       }
 
       @media (min-width:$screen-xl) {

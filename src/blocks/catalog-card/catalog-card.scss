@@ -10,55 +10,94 @@
 
   }
   &__view {
+    display: block;
     border: 1px solid #787879;
     border-radius: 15px;
     width: 100%;
     padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: border-color $transition-time;
+    margin-bottom: 10px;
+
+    @media (max-width: $screen-md - 1) {
+      padding-bottom: 65%;
+    }
+
+    &:hover {
+      border-color: #f5df4e;
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
   }
   &__body {
 
   }
   &__title {
-    font-size: 18px;
+    font-size: 14px;
+    line-height: 1.2;
     font-weight: 600;
+    margin-bottom: 5px;
     a {
       color: #000;
+      display: block;
       text-decoration: none;
+
+      &:hover {
+        color: #f5df4e;
+      }
     }
   }
   &__info {
 
   }
+
   &__info-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    font-size: 10px;
+    margin-bottom: 10px;
 
     li {
       display: flex;
       justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 2px;
 
       span {
         &:first-child {
           flex-grow: 1;
+        }
+        &:last-child {
+          white-space: nowrap;
         }
       }
     }
   }
   &__action {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   &__price {
     span {
-      font-size: 28px;
+      font-size: 22px;
       font-weight: 700;
+      white-space: nowrap;
     }
   }
   &__btn {
     .btn {
       background-color: #f5df4e;
       text-transform: uppercase;
-      font-size: 17px;
+      font-size: 14px;
       font-weight: 600;
     }
   }

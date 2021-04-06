@@ -1,0 +1,33 @@
+// В этом файле должны быть стили для БЭМ-блока options-item, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.options-item {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__icon {
+    padding-bottom: 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &.icon-stock {
+      background-image: url(../img/icon-stock.png);
+    }
+    &.icon-3years {
+      background-image: url(../img/icon-3years.png);
+    }
+    &.icon-delivery {
+      background-image: url(../img/icon-delivery.png);
+    }
+  }
+
+  &__text {
+    text-align: center;
+    line-height: 1;
+    font-size: 12px;
+    span {
+      display: block;
+    }
+  }
+}

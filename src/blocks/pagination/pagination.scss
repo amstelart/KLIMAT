@@ -13,6 +13,7 @@ $border-color:                hsl(0, 0%, 60%) !default;
   $block-name:                &; // #{$block-name}__element
 
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: $line-height;
   margin-bottom: $line-height;
@@ -25,6 +26,7 @@ $border-color:                hsl(0, 0%, 60%) !default;
     text-decoration: none;
     text-align: center;
     color: $text-color;
+    font-size: 12px;
 
     & + & {
       border-left: 0;
@@ -40,12 +42,12 @@ $border-color:                hsl(0, 0%, 60%) !default;
 
       &:hover,
       &:focus {
-        background-color: $gray-lightest;
+        background-color: #f5df4e;
       }
     }
 
     &--active {
-      background-color: $gray-lightest;
+      background-color: #f5df4e;
     }
   }
 }

@@ -1,0 +1,90 @@
+// В этом файле должны быть стили для БЭМ-блока catalog-products, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.catalog-products {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .catalog-card {
+    margin-bottom: 40px;
+  }
+
+  &.view-tile {
+    @include row();
+
+    .catalog-card {
+      @include col();
+      @include col(xl, 4);
+      @include col(md, 6);
+    }
+    .catalog-card__view {
+      margin-bottom: 10px;
+    }
+    .catalog-card__info {
+      margin-bottom: 10px;
+    }
+    .catalog-card__action {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &.view-simple {
+
+    .catalog-card {
+      flex-basis: 100%;
+      max-width: 100%;
+      margin-bottom: 50px;
+    }
+    .catalog-card__inner {
+      display: flex;
+
+      @media (max-width: ($screen-sm - 1)) {
+        flex-direction: column;
+      }
+    }
+    .catalog-card__view {
+      flex-shrink: 0;
+      max-width: 200px;
+      flex-basis: 200px;
+      padding-bottom: 200px;
+      margin-right: 25px;
+      margin-bottom: 10px;
+
+      @media (max-width: ($screen-sm - 1)) {
+        margin-right: 0;
+        max-width: 100%;
+        flex-basis: 100%;
+        padding-bottom: 100%;
+      }
+    }
+    .catalog-card__body {
+      display: flex;
+      flex-wrap: wrap;
+      @media (max-width: ($screen-sm - 1)) {
+        flex-direction: column;
+      }
+    }
+    .catalog-card__title {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+    .catalog-card__info {
+      flex-grow: 1;
+      margin-right: 30px;
+      @media (max-width: ($screen-sm - 1)) {
+        margin-bottom: 10px;
+      }
+    }
+    .catalog-card__action {
+      display: block;
+      @media (max-width: ($screen-sm - 1)) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+}
