@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>KLIMAT</title>
+  <meta name="description" content>  <meta name="viewport" content="width=device-width, initial-scale=1">  <!--DEV Edge и ряд мобильных браузеров автоматом преобразуют телефоны в ссылки. Отключим это. -->  <meta name="format-detection" content="telephone=no">  <link rel="preconnect" href="https://fonts.gstatic.com">  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">  <link href="css/style.min.css" rel="stylesheet" media="screen">  <script>    // Маркер работающего javascript    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');    document.addEventListener('DOMContentLoaded', function(){      if (window.isMobile !== undefined) {        // console.log(isMobile);        if(isMobile.any) {          var rootClasses = ' is-mobile';          for (key in isMobile) {            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;            if(typeof isMobile[key] === 'object' && key !== 'other') {              for (type in isMobile[key]) {                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;              }            }          }          document.documentElement.className += rootClasses;        }      }      else {        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');      }    });  </script>  <!--DEV Перед </head> при сборке будут вставлены ссылки на favicon и служебные файлы --><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="page__inner">
+    <div class="page__content">
+      <header class="page-header" role="banner">
+        <div class="page-header__container">
+          <a href="/" class="page-header__logo"><img src="img/logo.svg" alt="Климат"></a>
+          <ul class="header-nav">
+            <li class="header-nav__item">
+              <a href="catalog.html" class="header-nav__link">Каталог</a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#" class="header-nav__link">Услуги</a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#" class="header-nav__link">Блог</a>
+            </li>
+            <li class="header-nav__item">
+              <a href="#" class="header-nav__link">Контакты</a>
+            </li>
+          </ul>
+          <button class="btn page-header__choose-btn">Подобрать кондиционер</button>
+          <div class="burger header-nav__toggler"><span></span></div>
+        </div>
+      </header>
+      <main class="basket" role="main">
+        <div class="basket__container">
+          <h1 class="basket__title">Оформление заказа <span>№0000001</span></h1>
+          <div class="basket__step">
+            <div class="basket__step-title">Состав заказа</div>
+            <div class="basket__order-list">
+              <div class="basket__order-item">
+                <div class="order-card">
+                  <div class="order-card__top-wrap">
+                    <div class="order-card__view">
+                      <a href="product.html" class="order-card__img-wrap">
+                        <img src="img/product-view-01.png" alt class="order-card__img">
+                      </a>
+                    </div>
+                    <div class="order-card__info">
+                      <div class="order-card__type"><a href="product.html">Кондиционер</a></div>
+                      <div class="order-card__name"><a href="product.html">Shivaki SSH-L079DC / SRH-L079DC</a></div>
+                    </div>
+                  </div>
+                  <div class="order-card__bottom-wrap">
+                    <div class="order-card__qty">
+                      <div class="field-num">
+                        <span class="field-num__input-wrap">
+                          <span class="field-num__input-and-btns">
+                            <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                            <input class="field-num__input" type="number" value="9" name="quantity" max="10" min="1" step="1">
+                            <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="order-card__price">
+                      <span>31 500 р.</span>
+                    </div>
+                    <div class="order-card__delete">
+                      <a href="#" class="delete"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="basket__order-item">
+                <div class="order-card"></div>
+              </div>
+            </div>
+            <div class="tabs type-inst">
+              <div class="type-inst__body">
+                <div class="type-inst__title">Тип установки</div>
+                <ul class="type-inst__options tabs__links" role="tablist">
+                  <li class="tabs__link-wrap tabs__link-wrap--active" role="presentation">
+                    <a href="#demo-tab-01" class="tabs__link" data-toggle="tab" role="tab"><span>Без установки</span></a>
+                  </li>
+                  <li class="tabs__link-wrap" role="presentation">
+                    <a href="#demo-tab-02" class="tabs__link" data-toggle="tab" role="tab"><span>Тип А</span><span class="option-price">6000 р</span></a>
+                  </li>
+                  <li class="tabs__link-wrap" role="presentation">
+                    <a href="#demo-tab-03" class="tabs__link" data-toggle="tab" role="tab"><span>Тип В</span><span class="option-price">9000 р</span></a>
+                  </li>
+                  <li class="tabs__link-wrap" role="presentation">
+                    <a href="#demo-tab-04" class="tabs__link" data-toggle="tab" role="tab"><span>Тип С</span><span class="option-price">12000 р</span></a>
+                  </li>
+                  <li class="tabs__link-wrap" role="presentation">
+                    <a href="#demo-tab-05" class="tabs__link" data-toggle="tab" role="tab"><span>Мой случай уникальный</span></a>
+                  </li>
+                </ul>
+                <div class="type-inst__conf">
+                  Продолжая заказ, я даю свое согласие на обработку
+                  моих персональных данных и принимаю условия
+                  <a href="#">«Согласия на обработку персональных данных Пользователей»</a>
+                </div>
+              </div>
+              <div class="type-inst__view tabs__content-wrapper">
+                <div class="tabs__content-item tabs__content-item--active" id="demo-tab-01" role="tabpanel">
+                  111
+                </div>
+                <div class="tabs__content-item" id="demo-tab-02" role="tabpanel">
+                  222
+                </div>
+                <div class="tabs__content-item" id="demo-tab-03" role="tabpanel">
+                  333
+                </div>
+                <div class="tabs__content-item" id="demo-tab-04" role="tabpanel">
+                  444
+                </div>
+                <div class="tabs__content-item" id="demo-tab-05" role="tabpanel">
+                  555
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="basket__step">
+            <div class="basket__step-name">Способ получения</div>
+          </div>
+          <div class="basket__step">
+            <div class="basket__step-name">Способ оплаты</div>
+          </div>
+          <div class="basket__step">
+            <div class="basket__step-name">Получатель</div>
+          </div>
+          <div class="basket__nav">
+            <ul class="basket__nav-list">
+              <li class="basket__nav-item active"><a href="basket-step-1.html">1 Состав заказа</a></li>
+              <li class="basket__nav-item"><a href="basket-step-2.html">2 Способ получения</a></li>
+              <li class="basket__nav-item"><a href="basket-step-3.html">3 Способ оплаты</a></li>
+              <li class="basket__nav-item"><a href="basket-step-4.html">4 Получатель</a></li>
+            </ul>
+            <div class="basket__nav-action">
+              <a href="#" class="btn btn--main">Далее</a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="page__footer-wrapper">      <footer class="page-footer" role="contentinfo">        <div class="page-footer__container">          <div class="page-footer__company">            <img class="page-footer__company-logo" src="img/logo-footer.svg" alt>            <div class="page-footer__company-caption">              <p>Мы - «о два ру». За нашими плечами 12 лет опыта в работе                с системами кондиционирования. Мы сопровождаем наших клиентов                получаем обратную связь и улучшаем качество сервиса.</p>              <p>Наша цель - сделать доступнымы кондиционеры для каждого</p>              <p>© o-dva.ru 2021<br>                сайт разработан на pixadelica.ru</p>            </div>          </div>          <div class="page-footer__contacts">            <div class="page-footer__contacts-group">              <p>ИП Акульшин Андрей Николаевич</p>              <p>ИНН 463226294886</p>              <p>г. Курск, ул. Дзержинского, 40</p>            </div>            <div class="page-footer__contacts-payment">              <div class="payment-item">                <img src="img/visa-logo.png" alt>              </div>              <div class="payment-item">                <img src="img/mastercard-logo.png" alt>              </div>              <div class="payment-item">                <img src="img/mir-logo.png" alt>              </div>            </div>            <div class="page-footer__contacts-group">              <p>+7 4712 54 64 54</p>              <p>sales@o-dva.ru</p>            </div>          </div>        </div>      </footer>    </div>
+  </div>  <script src="js/script.min.js"></script></body>
+</html>
