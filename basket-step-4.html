@@ -61,92 +61,88 @@
             </div>
           </div>
           <div class="basket__step">
-            <div class="basket__step-title">Способ получения</div>
-            <div class="tabs">
-              <ul class="tabs__links" role="tablist">
-                <li class="tabs__link-wrap tabs__link-wrap--active" role="presentation">
-                  <a href="#demo-tab-01" class="tabs__link" data-toggle="tab" role="tab">Доставка</a>
-                </li>
-                <li class="tabs__link-wrap" role="presentation">
-                  <a href="#demo-tab-02" class="tabs__link" data-toggle="tab" role="tab">Самовывоз</a>
-                </li>
-              </ul>
-              <div class="tabs__content-wrapper">
-                <!-- Доставка -->
-                <div class="tabs__content-item tabs__content-item--active" id="demo-tab-01" role="tabpanel">
-                  <div class="basket__step-form-row">
-                    <div class="basket__step-form-col basket__step-form-field">
-                      <label class="field-text">
-                        <span class="field-text__name">Дата</span>
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input" type="text" placeholder="29 марта, пн" id name>
-                        </span>
-                      </label>
-                    </div>
-                    <div class="basket__step-form-col basket__step-form-field">
-                      <label class="field-text">
-                        <span class="field-text__name">Время</span>
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input" type="text" placeholder="09:00 - 11:00 (500 руб.)" id name>
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="basket__step-form-row">
-                    <div class="basket__step-form-col basket__step-form-field">
-                      <label class="field-text">
-                        <span class="field-text__name">Улица, дом / корпус</span>
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input" type="text" placeholder="ул. Береговая, д. 5" id name>
-                        </span>
-                      </label>
-                    </div>
-                    <div class="basket__step-form-col basket__step-form-field">
-                      <label class="field-text">
-                        <span class="field-text__name">Квартира</span>
-                        <span class="field-text__input-wrap">
-                          <input class="field-text__input" type="text" placeholder="74" id name>
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="basket__step-form-field">
-                    <label class="field-text">
-                      <span class="field-text__name">Комментарий курьеру</span>
-                      <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="text" placeholder="placeholder" id name>
-                      </span>
-                    </label>
+            <div class="received-step">
+              <div class="received-step__head">
+                <div class="received-step__title">Способ получения</div>
+                <a class="received-step__edit" href="#">Изменить</a>
+              </div>
+              <div class="received-step__wayget">
+                <div class="received-step__wayget-info">
+                  <div class="received-step__type">Доставка</div>
+                  <div class="received-step__addr">
+                    <span>29 марта, пн, 09:0-11:00</span>
+                    <span>ул. Береговая, д. 5</span>
                   </div>
                 </div>
-                <!-- Самовывоз -->
-                <div class="tabs__content-item" id="demo-tab-02" role="tabpanel">
-                  <div class="basket__step-form-field">
-                    <label class="field-text">
-                      <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="text" placeholder="placeholder" value="ул. Красной Армии, 40" id name>
-                      </span>
-                    </label>
-                  </div>
-                  <div class="basket__step-form-field">
-                    <img src="img/map.png" alt>
-                  </div>
+                <div class="received-step__wayget-price">
+                  <span class="received-step__price">31 500 p</span>
                 </div>
               </div>
             </div>
           </div>
           <div class="basket__step">
-            <div class="basket__step-name">Способ оплаты</div>
+            <div class="received-step">
+              <div class="received-step__head">
+                <div class="received-step__title">Способ оплаты</div>
+                <a class="received-step__edit" href="#">Изменить</a>
+              </div>
+            </div>
           </div>
           <div class="basket__step">
-            <div class="basket__step-name">Получатель</div>
+            <div class="basket__step-title">Получатель</div>
+            <form action class="basket__step-form">
+              <div class="basket__step-form-row">
+                <div class="basket__step-form-col basket__step-form-field">
+                  <label class="field-text">
+                    <span class="field-text__name">Имя</span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Александр" id name>
+                    </span>
+                  </label>
+                </div>
+                <div class="basket__step-form-col basket__step-form-field">
+                  <label class="field-text">
+                    <span class="field-text__name">Фамилия</span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Петров" id name>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="basket__step-form-row">
+                <div class="basket__step-form-col basket__step-form-field">
+                  <label class="field-text">
+                    <span class="field-text__name">Номер телефона</span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="+7 (9__)___-__-__" id name>
+                    </span>
+                  </label>
+                </div>
+                <div class="basket__step-form-col basket__step-form-field">
+                  <label class="field-text">
+                    <span class="field-text__name">E-mail</span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="sales@o-dva.ru" id name>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="basket__step-form-action">
+                <div class="step-action-btn">
+                  <button class="btn btn--main">Оплатить</button>
+                </div>
+                <div class="step-action-text">
+                  <p>Нажимая кнопку «Оплатить», вы подтверждаете свое согласие с условиями продажи в интеренет - магазине O-dva.ru </p>
+                </div>
+              </div>
+            </form>
           </div>
           <div class="basket__nav">
             <ul class="basket__nav-list">
               <li class="basket__nav-item"><a href="basket-step-1.html">1 Состав заказа</a></li>
-              <li class="basket__nav-item active"><a href="basket-step-2.html">2 Способ получения</a></li>
+              <li class="basket__nav-item"><a href="basket-step-2.html">2 Способ получения</a></li>
               <li class="basket__nav-item"><a href="basket-step-3.html">3 Способ оплаты</a></li>
-              <li class="basket__nav-item"><a href="basket-step-4.html">4 Получатель</a></li>
+              <li class="basket__nav-item active"><a href="basket-step-4.html">4 Получатель</a></li>
             </ul>
             <div class="basket__nav-action">
               <a href="#" class="btn btn--main">Далее</a>
