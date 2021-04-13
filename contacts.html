@@ -14,7 +14,7 @@
 <meta name="msapplication-config" content="/img/browserconfig.xml">
 <meta name="theme-color" content="#ffffff"></head>
 <body>
-  <div class="page__inner">
+  <div class="page__inner c-offcanvas-content-wrap">
     <div class="page__content">
       <header class="page-header" role="banner">
         <div class="page-header__container">
@@ -37,66 +37,107 @@
           <div class="burger header-nav__toggler"><span></span></div>
         </div>
       </header>
-      <main class="basket" role="main">
-        <div class="basket__container">
-          <h1 class="basket__title">Оформление заказа <span>№0000001</span></h1>
-          <div class="basket__step">
-            <div class="received-step">
-              <div class="received-step__head">
-                <div class="received-step__title">Состав заказа</div>
-                <a class="received-step__edit" href="#">Изменить</a>
-              </div>
-              <div class="received-step__product">
-                <div class="received-step__product-info">
-                  <div class="received-step__type">Кондиционер</div>
-                  <div class="received-step__name">Shivaki SSH-L079DC / SRH-L079DC</div>
-                </div>
-                <div class="received-step__product-quantity">
-                  <div class="received-step__quantity">1</div>
-                </div>
-                <div class="received-step__product-price">
-                  <span class="received-step__price">31 500 p</span>
-                </div>
-              </div>
+      <main class="contacts" role="main">
+        <div class="contacts__container">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href class="breadcrumbs__link">Контакты</a></li>
+          </ul>
+          <h1 class="contacts__title">Контакты</h1>
+          <div class="contacts__panel">
+            <div class="contacts__panel-title">ИП Акульшин Андрей Николаевич</div>
+            <div class="contacts__panel-group">
+              <ul class="contacts__panel-list">
+                <li>
+                  <span class="contacts__panel-name">Фактический адрес</span>
+                  <span class="contacts__panel-val">305001, Курск, Красной армии, дом 40</span>
+                </li>
+                <li>
+                  <span class="contacts__panel-name">Электронная почта</span>
+                  <span class="contacts__panel-val"><a href="mailto:sales@o-dva.ru">sales@o-dva.ru</a></span>
+                </li>
+                <li>
+                  <span class="contacts__panel-name">Телефон</span>
+                  <span class="contacts__panel-val"><a href="tel:84712546454">+7 (4712) 54-64-54</a></span>
+                </li>
+              </ul>
+            </div>
+            <div class="contacts__panel-group">
+              <div class="contacts__panel-group-name">Реквизиты</div>
+              <ul class="contacts__panel-list">
+                <li>
+                  <span class="contacts__panel-name">ИНН</span>
+                  <span class="contacts__panel-val">463226294886</span>
+                </li>
+                <li>
+                  <span class="contacts__panel-name">Расчетный счет</span>
+                  <span class="contacts__panel-val">40802810216010001473</span>
+                </li>
+                <li>
+                  <span class="contacts__panel-name">Банк</span>
+                  <span class="contacts__panel-val">Центрально-черноземный филиал ООО “Экспобанк”</span>
+                </li>
+                <li>
+                  <span class="contacts__panel-name">Корреспондентский счет</span>
+                  <span class="contacts__panel-val">30101810345250000330</span>
+                </li>
+                <li>
+                  <span class="contacts__panel-name">БИК</span>
+                  <span class="contacts__panel-val">043807330</span>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="basket__step">
-            <div class="received-step">
-              <div class="received-step__head">
-                <div class="received-step__title">Способ получения</div>
-                <a class="received-step__edit" href="#">Изменить</a>
-              </div>
-              <div class="received-step__wayget">
-                <div class="received-step__wayget-info">
-                  <div class="received-step__type">Доставка</div>
-                  <div class="received-step__addr">
-                    <span>29 марта, пн, 09:0-11:00</span>
-                    <span>ул. Береговая, д. 5</span>
-                  </div>
-                </div>
-                <div class="received-step__wayget-price">
-                  <span class="received-step__price">31 500 p</span>
-                </div>
-              </div>
-            </div>
+          <div class="contacts__map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A52025efda9b50fd8db010aa3ae0d132e126223dcb3dae2208ac685e469c0d73c&amp;width=100%25&amp;height=470&amp;lang=ru_RU&amp;scroll=false"></script>
           </div>
-          <div class="basket__step">
-            <div class="basket__step-name">Способ оплаты</div>
-          </div>
-          <div class="basket__nav">
-            <ul class="basket__nav-list">
-              <li class="basket__nav-item"><a href="basket-step-1.html">1 Состав заказа</a></li>
-              <li class="basket__nav-item"><a href="basket-step-2.html">2 Способ получения</a></li>
-              <li class="basket__nav-item active"><a href="basket-step-3.html">3 Способ оплаты</a></li>
-              <li class="basket__nav-item"><a href="basket-step-4.html">4 Получатель</a></li>
-            </ul>
-            <div class="basket__nav-action">
-              <a href="#" class="btn btn--main">Далее</a>
-            </div>
+          <div class="contacts__form-wrap">
+            <h2 class="contacts__form-title">Оставьте вашу заявку и мы перезвоним</h2>
+            <form class="contacts__form">
+              <div class="contacts__form-row">
+                <div class="contacts__form-col">
+                  <label class="field-text field-text--feedback">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Ф.И.О" id name>
+                    </span>
+                  </label>
+                </div>
+                <div class="contacts__form-col">
+                  <label class="field-text field-text--feedback">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="ТЕЛЕФОН" id name>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <label class="field-text field-text--feedback">
+                <span class="field-text__input-wrap">
+                  <textarea class="field-text__input" type="textarea" name id rows="5" placeholder="Опишите ваш впрос..."></textarea>
+                </span>
+              </label>
+              <div class="field-checkbox field-checkbox--feedback">
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox" id name>
+                    <span class="field-checkbox__name-text">Нажимая кнопку "Отправить" вы даёте свое согласие на <a href="#">обработку персональных данных</a></span>
+                  </label>
+                </div>
+              </div>
+              <div class="field-actions field-actions--feedback">
+                <button class="btn" type="submit">Отправить</button>
+              </div>
+            </form>
           </div>
         </div>
       </main>
     </div>
     <div class="page__footer-wrapper">      <footer class="page-footer" role="contentinfo">        <div class="page-footer__container">          <div class="page-footer__company">            <img class="page-footer__company-logo" src="img/logo-footer.svg" alt>            <div class="page-footer__company-caption">              <p>Мы - «о два ру». За нашими плечами 12 лет опыта в работе                с системами кондиционирования. Мы сопровождаем наших клиентов                получаем обратную связь и улучшаем качество сервиса.</p>              <p>Наша цель - сделать доступнымы кондиционеры для каждого</p>              <p>© o-dva.ru 2021<br>                сайт разработан на pixadelica.ru</p>            </div>          </div>          <div class="page-footer__contacts">            <div class="page-footer__contacts-group">              <p>ИП Акульшин Андрей Николаевич</p>              <p>ИНН 463226294886</p>              <p>г. Курск, ул. Дзержинского, 40</p>            </div>            <div class="page-footer__contacts-payment">              <div class="payment-item">                <img src="img/visa-logo.png" alt>              </div>              <div class="payment-item">                <img src="img/mastercard-logo.png" alt>              </div>              <div class="payment-item">                <img src="img/mir-logo.png" alt>              </div>            </div>            <div class="page-footer__contacts-group">              <p>+7 4712 54 64 54</p>              <p>sales@o-dva.ru</p>            </div>          </div>        </div>      </footer>    </div>
+  </div>
+  <div class="c-offcanvas is-hidden" id="left" role="complementary">
+    <div class="c-offcanvas__head">
+      <button type="button" class="btn btn--sm btn--red js-offcanvas-close">Закрыть</button>
+    </div>
+    <!-- container for appendAround -->
+    <div class="offcanvas-nav d-block mobile-filters-wrap" data-set="bs"></div>
   </div>  <script src="js/script.min.js"></script></body>
 </html>
