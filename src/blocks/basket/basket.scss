@@ -1,0 +1,195 @@
+// В этом файле должны быть стили для БЭМ-блока basket, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.basket {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding-top: 165px;
+  padding-bottom: 40px;
+
+  @media (max-width: $screen-xl - 1) {
+    padding-top: 100px;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin: 10px 0 30px;
+    padding: 0;
+    font-weight: 600;
+    @media (min-width: $screen-xl) {
+      font-size: 36px;
+      margin: 30px 0 40px;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 18px;
+      white-space: nowrap;
+      @media (min-width: $screen-xl) {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__order-list {
+    margin-bottom: 30px;
+  }
+
+  &__step {
+    margin-bottom: 35px;
+  }
+  &__step-name {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.1;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 25px 30px;
+
+    @media (min-width: $screen-xl) {
+      font-size: 40px;
+      padding: 55px 68px;
+    }
+  }
+  &__step-title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-xl) {
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__step-form-row {
+    @include row;
+  }
+  &__step-form-col {
+    @include col();
+    @include col(md, 6);
+  }
+  &__step-form-field {
+    margin-bottom: 30px;
+    @media (max-width: ($screen-lg - 1)) {
+      margin-bottom: 15px;
+    }
+  }
+  &__step-form-action {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: ($screen-md - 1)) {
+      flex-wrap: wrap;
+    }
+
+    .step-action-btn {
+      flex-basis: 240px;
+      flex-shrink: 0;
+
+      @media (max-width: ($screen-md - 1)) {
+        flex-basis: 100%;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 10px 22px;
+        font-size: 18px;
+        font-weight: 500px;
+
+        @media (min-width: $screen-md) {
+          padding: 10px 22px;
+          font-size: 18px;
+        }
+
+        @media (min-width: $screen-xl) {
+          padding: 12px 24px;
+          font-size: 25px;
+        }
+      }
+    }
+    .step-action-text {
+      padding: 14px 40px;
+      font-size: 12px;
+      line-height: 1.2;
+
+      @media (max-width: ($screen-md - 1)) {
+        padding: 15px 10px;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      a {
+        color: #000;
+        white-space: nowrap;
+      }
+
+      @media (min-width: $screen-lg) {
+        padding: 0 60px;
+        font-size: 16px;
+      }
+      @media (min-width: $screen-xl) {
+        padding: 0 90px;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    margin: 60px 0;
+  }
+  &__nav-list {
+    flex-grow: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+    margin-right: 15px;
+
+    @media (min-width: $screen-xl) {
+      overflow-x: initial;
+    }
+  }
+  &__nav-item {
+    flex-grow: 1;
+    text-align: center;
+    white-space: nowrap;
+
+    &.active {
+      a {
+        color: #514f4f;
+      }
+    }
+
+    a {
+      display: block;
+      padding: 3px 15px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #a5a4a4;
+      text-decoration: none;
+
+      @media (min-width: $screen-xl) {
+        font-size: 18px;
+      }
+    }
+  }
+  &__nav-action {
+    flex-shrink: 0;
+
+    .btn {
+      min-width: 167px;
+    }
+  }
+}

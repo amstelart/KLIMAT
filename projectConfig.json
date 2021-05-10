@@ -30,6 +30,7 @@
     "field-select": [
       "--error"
     ],
+    "field-num": [],
     "field-actions": [],
     "breadcrumbs": [],
     "pagination": [],
@@ -57,7 +58,19 @@
     "options-item": [],
     "catalog-products": [],
     "view-option": [],
-    "mobile-filters-wrap": []
+    "mobile-filters-wrap": [],
+    "basket": [],
+    "order-card": [],
+    "delete": [],
+    "type-inst": [],
+    "received-step": [],
+    "type-inst-plan": [],
+    "contacts": [],
+    "payment-method": [],
+    "method-receiving": [],
+    "installation": [],
+    "installation-tabs": [],
+    "services-box": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

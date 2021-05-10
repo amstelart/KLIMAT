@@ -1,0 +1,67 @@
+// В этом файле должны быть стили для БЭМ-блока payment-method, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.payment-method {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .field-radio__input-wrap {
+    border: 1px solid #444545;
+    border-radius: 10px;
+    padding: 12px 28px;
+    margin-bottom: 25px;
+  }
+  .field-radio__name {
+    cursor: pointer;
+    display: block;
+    padding-left: 0;
+    padding-right: 30px;
+    margin-right: 0;
+  }
+  .field-radio__name-text {
+    font-size: 16px;
+    display: block;
+
+    @media (min-width: $screen-xl) {
+      font-size: 24px;
+    }
+
+    span {
+      display: inline-block;
+      margin-right: 0.6em;
+      white-space: nowrap;
+
+      &:not(:last-child):after {
+        content: '/';
+        display: inline-block;
+        margin-left: 0.8em;
+        color: $gray;
+      }
+    }
+
+    &:before {
+      left: initial;
+      right: 0px;
+      top: 4px;
+      width: 18px;
+      height: 18px;
+      @media (min-width: $screen-xl) {
+        top: 6px;
+        width: 26px;
+        height: 26px;
+      }
+    }
+    &:after {
+      left: initial;
+      right: 6px;
+      top: 10px;
+      @media (min-width: $screen-xl) {
+        right: 9px;
+        top: 15px;
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+}

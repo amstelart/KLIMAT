@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>KLIMAT</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="basket" role="main">
+
+        <div class="basket__container">
+
+          <h1 class="basket__title">Оформление заказа <span>№0000001</span></h1>
+
+          <div class="basket__step">
+            <div class="basket__step-title">Состав заказа</div>
+            <div class="basket__order-list">
+              <div class="basket__order-item">
+                <div class="order-card">
+                  <div class="order-card__top-wrap">
+                    <div class="order-card__view">
+                      <a href="product.html" class="order-card__img-wrap">
+                        <img src="img/product-view-01.png" alt="" class="order-card__img">
+                      </a>
+                    </div>
+                    <div class="order-card__info">
+                      <div class="order-card__type"><a href="product.html">Кондиционер</a></div>
+                      <div class="order-card__name"><a href="product.html">Shivaki SSH-L079DC / SRH-L079DC</a></div>
+                    </div>
+                  </div>
+                  <div class="order-card__bottom-wrap">
+                    <div class="order-card__qty">
+                      <div class="field-num">
+                        <span class="field-num__input-wrap">
+                          <span class="field-num__input-and-btns">
+                            <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                            <input class="field-num__input" type="number" value="9" name="quantity" max="10" min="1" step="1">
+                            <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="order-card__price">
+                      <span>31 500 р.</span>
+                    </div>
+                    <div class="order-card__delete">
+                      <a href="#" class="delete"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="basket__order-item">
+                <div class="order-card"></div>
+              </div>
+            </div>
+            <div class="tabs type-inst">
+              <div class="type-inst__body">
+                <div class="type-inst__title">Тип установки</div>
+                <ul class="type-inst__options tabs__links" role="tablist">
+                  <li class="tabs__link-wrap tabs__link-wrap--active" role="presentation">
+                    <a href="#demo-tab-01" class="tabs__link" data-toggle="tab" role="tab"><span>Без установки</span></a>
+                  </li>
+                  <li class="tabs__link-wrap" role="presentation">
+                    <a href="#demo-tab-02" class="tabs__link" data-toggle="tab" role="tab"><span>Тип А</span><span class="option-price">6000 р</span></a>
+                  </li>
+                  <li class="tabs__link-wrap" role="presentation">
+                    <a href="#demo-tab-03" class="tabs__link" data-toggle="tab" role="tab"><span>Тип В</span><span class="option-price">9000 р</span></a>
+                  </li>
+                  <li class="tabs__link-wrap" role="presentation">
+                    <a href="#demo-tab-04" class="tabs__link" data-toggle="tab" role="tab"><span>Тип С</span><span class="option-price">12000 р</span></a>
+                  </li>
+                  <li class="tabs__link-wrap" role="presentation">
+                    <a href="#demo-tab-05" class="tabs__link" data-toggle="tab" role="tab"><span>Мой случай уникальный</span></a>
+                  </li>
+                </ul>
+                <div class="type-inst__conf">
+                  Продолжая заказ, я даю свое согласие на обработку
+                  моих персональных данных и принимаю условия
+                  <a href="#">«Согласия на обработку персональных данных Пользователей»</a>
+                </div>
+              </div>
+              <div class="type-inst__view tabs__content-wrapper">
+                <div class="tabs__content-item tabs__content-item--active" id="demo-tab-01" role="tabpanel">
+
+                </div>
+                <div class="tabs__content-item" id="demo-tab-02" role="tabpanel">
+                  <div class="type-inst__content-inner">
+                    <div class="type-inst__content-caption">
+                      <div class="type-inst__content-type">Тип А</div>
+                      <div class="type-inst__content-name">Установка кондиционера</div>
+                    </div>
+                    <div class="type-inst__content-plan">
+                      <div class="type-inst-plan">
+                        <div class="type-inst-plan__view">
+                          <div class="item"></div>
+                        </div>
+                        <div class="type-inst-plan__nav">
+                          <div class="item"></div>
+                          <div class="item"></div>
+                          <div class="item"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__content-item" id="demo-tab-03" role="tabpanel">
+                  <div class="type-inst__content-inner">
+                    <div class="type-inst__content-caption">
+                      <div class="type-inst__content-type">Тип B</div>
+                      <div class="type-inst__content-name">Установка кондиционера</div>
+                    </div>
+                    <div class="type-inst__content-plan">
+                      <div class="type-inst-plan">
+                        <div class="type-inst-plan__view">
+                          <div class="item"></div>
+                        </div>
+                        <div class="type-inst-plan__nav">
+                          <div class="item"></div>
+                          <div class="item"></div>
+                          <div class="item"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__content-item" id="demo-tab-04" role="tabpanel">
+                  <div class="type-inst__content-inner">
+                    <div class="type-inst__content-caption">
+                      <div class="type-inst__content-type">Тип C</div>
+                      <div class="type-inst__content-name">Установка кондиционера</div>
+                    </div>
+                    <div class="type-inst__content-plan">
+                      <div class="type-inst-plan">
+                        <div class="type-inst-plan__view">
+                          <div class="item"></div>
+                        </div>
+                        <div class="type-inst-plan__nav">
+                          <div class="item"></div>
+                          <div class="item"></div>
+                          <div class="item"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__content-item" id="demo-tab-05" role="tabpanel">
+                  555
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="basket__nav">
+            <ul class="basket__nav-list">
+              <li class="basket__nav-item active"><a href="basket-step-1.html">1 Состав заказа</a></li>
+              <li class="basket__nav-item"><a href="basket-step-2.html">2 Способ получения</a></li>
+              <li class="basket__nav-item"><a href="basket-step-3.html">3 Способ оплаты</a></li>
+              <li class="basket__nav-item"><a href="basket-step-4.html">4 Получатель</a></li>
+            </ul>
+            <div class="basket__nav-action">
+              <a href="#" class="btn btn--main">Далее</a>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

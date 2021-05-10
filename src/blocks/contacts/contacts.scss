@@ -1,0 +1,114 @@
+// В этом файле должны быть стили для БЭМ-блока contacts, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.contacts {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding-top: 165px;
+  padding-bottom: 40px;
+
+  @media (max-width: $screen-lg - 1) {
+    padding-top: 100px;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    @media (max-width: ($screen-md - 1)) {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__panel {
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 10px 25px;
+    margin-bottom: 30px;
+  }
+
+  &__panel-title {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 20px;
+    @media (min-width: $screen-md) {
+      font-size: 24px;
+    }
+  }
+  &__panel-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: flex;
+      @media (max-width: ($screen-md - 1)) {
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__panel-name {
+    flex-basis: 237px;
+    flex-shrink: 0;
+    padding-right: 15px;
+    font-weight: 500;
+    @media (max-width: ($screen-md - 1)) {
+      flex-basis: auto;
+      font-weight: 600;
+    }
+  }
+  &__panel-val {
+    flex-grow: 1;
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+  &__map {
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    margin: 0;
+  }
+
+  &__form-title {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    @media (max-width: ($screen-lg - 1)) {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+
+    @media (min-width:$screen-lg) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__form-col {
+    padding: 0 15px;
+    flex: 0 0 100%;
+
+    @media (min-width:$screen-lg) {
+      flex: 0 0 50%;
+    }
+  }
+}

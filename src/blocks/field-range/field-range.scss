@@ -36,8 +36,11 @@ $border-radius:               3px !default;
   &__separator {
     width: 5px;
     height: 2px;
-    background: #000;
+    background: #ccc;
     margin: 5px;
+    flex-shrink: 0;
+    align-self: flex-end;
+    margin-bottom: 22px;
   }
   &__input {
     display: inline-block;

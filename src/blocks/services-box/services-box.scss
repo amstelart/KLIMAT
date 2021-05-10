@@ -1,0 +1,55 @@
+// В этом файле должны быть стили для БЭМ-блока services-box, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.services-box {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding-bottom: 45px;
+
+  &__container {
+    @include container;
+    padding: 0 40px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__row {
+    @include row;
+  }
+  &__btn-wrap {
+    @include col();
+    @include col(lg, 6);
+  }
+  &__btn {
+    width: 100%;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #f5df4e;
+    text-shadow: -1px 2px 1px rgba(87, 86, 86, 0.9);
+    border: 1px solid #000;
+    border-radius: 8px;
+    background-color: transparent;
+    padding: 3px 22px;
+    transition: text-shadow $transition-time;
+
+    @media (max-width: ($screen-md - 1)) {
+      font-size: 22px;
+      text-shadow: none;
+    }
+
+    &:hover,
+    &:active {
+      background-color: transparent;
+      text-shadow: none;
+      color: #f5df4e;
+    }
+  }
+}

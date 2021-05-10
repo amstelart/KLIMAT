@@ -1,0 +1,29 @@
+// В этом файле должны быть стили для БЭМ-блока type-inst-plan, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.type-inst-plan {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__view {
+    margin-bottom: 20px;
+    .item {
+      background-color: #fff;
+      padding-bottom: 80%;
+      border-radius: 10px;
+      width: 100%;
+    }
+  }
+  &__nav {
+    display: flex;
+
+    .item {
+      background-color: #fff;
+      width: 100%;
+      padding-bottom: 60px;
+      border-radius: 10px;
+      margin: 0 15px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+// В этом файле должны быть стили для БЭМ-блока installation, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.installation {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding-top: 165px;
+  padding-bottom: 40px;
+
+  @media (max-width: $screen-xl - 1) {
+    padding-top: 100px;
+  }
+
+  &__container {
+    @include container;
+  }
+}

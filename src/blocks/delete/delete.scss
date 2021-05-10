@@ -1,0 +1,14 @@
+// В этом файле должны быть стили для БЭМ-блока delete, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.delete {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  width: 26px;
+  height: 28px;
+  background-image: url(../img/delete-icon.png);
+  background-repeat: no-repeat;
+}

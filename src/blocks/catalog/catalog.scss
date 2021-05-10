@@ -9,6 +9,10 @@
   padding-top: 165px;
   padding-bottom: 40px;
 
+  @media (max-width: $screen-lg - 1) {
+    padding-top: 100px;
+  }
+
   &__container {
     @include container;
     display: flex;
@@ -56,6 +60,17 @@
 
   &__group-options {
     margin-bottom: 20px;
+
+    .c-button {
+      background-color: rgb(245, 223, 78);
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 600;
+
+      @media (min-width: $screen-lg) {
+        display: none;
+      }
+    }
   }
 }
 

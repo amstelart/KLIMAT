@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>KLIMAT</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner c-offcanvas-content-wrap">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="contacts" role="main">
+        <div class="contacts__container">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Контакты</a></li>
+          </ul>
+          <h1 class="contacts__title">Контакты</h1>
+          <div class="contacts__panel">
+            <div class="contacts__panel-title">ИП Акульшин Андрей Николаевич</div>
+            <div class="contacts__panel-group">
+              <ul class="contacts__panel-list">
+                <li>
+                  <span class="contacts__panel-name">Фактический адрес</span>
+                  <span class="contacts__panel-val">305001, Курск, Красной армии, дом 40</span>
+                </li>
+                <li>
+                  <span class="contacts__panel-name">Электронная почта</span>
+                  <span class="contacts__panel-val"><a href="mailto:sales@o-dva.ru">sales@o-dva.ru</a></span>
+                </li>
+                <li>
+                  <span class="contacts__panel-name">Телефон</span>
+                  <span class="contacts__panel-val"><a href="tel:84712546454">+7 (4712) 54-64-54</a></span>
+                </li>
+              </ul>
+            </div>
+            <div class="contacts__panel-group">
+              <div class="contacts__panel-group-name">Реквизиты</div>
+              <ul class="contacts__panel-list">
+                <li>
+                  <span class="contacts__panel-name">ИНН</span>
+                  <span class="contacts__panel-val">463226294886</span>
+                </li>
+                <li>
+                  <span class="contacts__panel-name">Расчетный счет</span>
+                  <span class="contacts__panel-val">40802810216010001473</span>
+                </li>
+                <li>
+                  <span class="contacts__panel-name">Банк</span>
+                  <span class="contacts__panel-val">Центрально-черноземный филиал ООО “Экспобанк”</span>
+                </li>
+                <li>
+                  <span class="contacts__panel-name">Корреспондентский счет</span>
+                  <span class="contacts__panel-val">30101810345250000330</span>
+                </li>
+                <li>
+                  <span class="contacts__panel-name">БИК</span>
+                  <span class="contacts__panel-val">043807330</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="contacts__map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A52025efda9b50fd8db010aa3ae0d132e126223dcb3dae2208ac685e469c0d73c&amp;width=100%25&amp;height=470&amp;lang=ru_RU&amp;scroll=false"></script>
+          </div>
+          <div class="contacts__form-wrap">
+            <h2 class="contacts__form-title">Оставьте вашу заявку и мы перезвоним</h2>
+            <form class="contacts__form">
+              <div class="contacts__form-row">
+                <div class="contacts__form-col">
+                  <label class="field-text field-text--feedback">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Ф.И.О" id="" name="">
+                    </span>
+                  </label>
+                </div>
+                <div class="contacts__form-col">
+                  <label class="field-text field-text--feedback">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="ТЕЛЕФОН" id="" name="">
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <label class="field-text field-text--feedback">
+                <span class="field-text__input-wrap">
+                  <textarea class="field-text__input" type="textarea" name="" id="" rows="5" placeholder="Опишите ваш впрос..." id="" name=""></textarea>
+                </span>
+              </label>
+              <div class="field-checkbox field-checkbox--feedback">
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox" id="" name="">
+                    <span class="field-checkbox__name-text">Нажимая кнопку "Отправить" вы даёте свое согласие на <a href="#">обработку персональных данных</a></span>
+                  </label>
+                </div>
+              </div>
+              <div class="field-actions field-actions--feedback">
+                <button class="btn" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  <div class="c-offcanvas is-hidden" id="left" role="complementary">
+    <div class="c-offcanvas__head">
+      <button type="button" class="btn btn--sm btn--red js-offcanvas-close">Закрыть</button>
+    </div>
+    <!-- container for appendAround -->
+    <div class="offcanvas-nav d-block mobile-filters-wrap" data-set="bs"></div>
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>
